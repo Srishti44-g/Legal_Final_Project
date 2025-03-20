@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive legal education platform covering criminal law, corporate law, taxation, human rights, cybersecurity, dispute resolution, and environmental law.">
+    <meta property="og:title" content="LegalLearn - Modern Legal Education Platform">
+    <meta property="og:description" content="Access structured, user-friendly legal education resources across all major domains of law.">
+    <meta property="og:type" content="website">
+    <title>LegalLearn - Cyber and IT Law</title>
+    <style>
+        :root {
+            --primary: #0a2c5a;
+            --secondary: #d4af37;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        [data-theme="dark"] {
+            --primary: #1a4b8c;
+            --light: #212529;
+            --dark: #f8f9fa;
+            --gray: #adb5bd;
+            --light-gray: #343a40;
+            --white: #2b3035;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            transition: var(--transition);
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 270px;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 0;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            transition: var(--transition);
+            z-index: 1000;
+        }
+
+        .sidebar-header {
+            padding: 0 1.5rem 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .logo-icon {
+            font-size: 1.8rem;
+            margin-right: 0.5rem;
+            color: var(--secondary);
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .logo-text span {
+            color: var(--secondary);
+        }
+
+        .sidebar-search {
+            position: relative;
+            margin-top: 1rem;
+        }
+
+        .sidebar-search input {
+            width: 100%;
+            padding: 0.7rem 1rem 0.7rem 2.5rem;
+            border: none;
+            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            font-size: 0.9rem;
+        }
+
+        .sidebar-search input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .sidebar-search i {
+            position: absolute;
+            left: 0.8rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .nav-menu {
+            list-style: none;
+            padding: 1.5rem 0;
+        }
+
+        .nav-item {
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem 1.5rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover, .nav-link.active {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            border-left: 3px solid var(--secondary);
+        }
+
+        .nav-link i {
+            margin-right: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .dropdown-container {
+            display: none;
+            padding-left: 2.5rem;
+        }
+
+        .dropdown-item {
+            padding: 0.6rem 0;
+        }
+
+        .dropdown-link {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .dropdown-link:hover {
+            color: var(--secondary);
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            flex: 1;
+            margin-left: 270px;
+            padding: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--dark);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .theme-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+        }
+
+        .theme-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--gray);
+            transition: var(--transition);
+            border-radius: 30px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 4px;
+            bottom: 4px;
+            background-color: var(--white);
+            transition: var(--transition);
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: var(--secondary);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(30px);
+        }
+
+        .theme-icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.8rem;
+            color: var(--dark);
+        }
+
+        .sun-icon {
+            left: 8px;
+            opacity: 1;
+        }
+
+        .moon-icon {
+            right: 8px;
+            opacity: 0;
+        }
+
+        input:checked ~ .sun-icon {
+            opacity: 0;
+        }
+
+        input:checked ~ .moon-icon {
+            opacity: 1;
+        }
+
+        .section-title {
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 50px;
+            background-color: var(--secondary);
+        }
+
+        .card {
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            padding: 1.5rem;
+            background-color: var(--primary);
+            color: var(--white);
+            position: relative;
+        }
+
+        .card-title {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .card-icon {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 1.5rem;
+            color: var(--secondary);
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-footer {
+            padding: 1rem 1.5rem;
+            background-color: var(--light-gray);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #063a77;
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: var(--dark);
+        }
+
+        .btn-secondary:hover {
+            background-color: #c09c30;
+        }
+
+        .btn-sm {
+            padding: 0.4rem 0.8rem;
+            font-size: 0.9rem;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .badge-primary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .badge-secondary {
+            background-color: var(--secondary);
+            color: var(--dark);
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+
+        .feature-item {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .feature-icon {
+            margin-right: 0.8rem;
+            color: var(--secondary);
+            font-size: 1rem;
+            padding-top: 0.2rem;
+        }
+
+        .expandable-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .expandable-trigger {
+            cursor: pointer;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .expandable-trigger:hover {
+            color: var(--primary);
+        }
+
+        .expandable-trigger i {
+            transition: transform 0.3s ease;
+        }
+
+        .expandable-trigger.active i {
+            transform: rotate(180deg);
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted var(--primary);
+            cursor: help;
+        }
+
+        .tooltip .tooltip-text {
+            visibility: hidden;
+            width: 200px;
+            background-color: var(--dark);
+            color: var(--white);
+            text-align: center;
+            border-radius: 6px;
+            padding: 0.5rem;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 0.85rem;
+        }
+
+        .tooltip .tooltip-text::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: var(--dark) transparent transparent transparent;
+        }
+
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .search-results {
+            display: none;
+            background-color: var(--white);
+            border-radius: 4px;
+            box-shadow: var(--shadow);
+            position: absolute;
+            width: 100%;
+            max-height: 300px;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+
+        .search-item {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid var(--light-gray);
+            cursor: pointer;
+        }
+
+        .search-item:hover {
+            background-color: var(--light-gray);
+        }
+
+        .search-item-title {
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .search-item-category {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+
+        .floating-button {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--secondary);
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            z-index: 99;
+            transition: var(--transition);
+        }
+
+        .floating-button:hover {
+            transform: scale(1.1);
+        }
+
+        .backtotop {
+            display: none;
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 2rem 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-title {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 30px;
+            height: 2px;
+            background-color: var(--secondary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-link {
+            padding: 0.4rem 0;
+        }
+
+        .footer-link a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-link a:hover {
+            color: var(--secondary);
+            padding-left: 0.5rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 992px) {
+            .sidebar {
+                transform: translateX(-100%);
+            }
+            .main-content {
+                margin-left: 0;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .sidebar.active {
+                transform: translateX(0);
+            }
+            .overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 999;
+                display: none;
+            }
+            .overlay.active {
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-content {
+                flex-direction: column;
+            }
+            .footer-section {
+                margin-bottom: 2rem;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            .top-bar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .theme-switch {
+                margin-top: 1rem;
+            }
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide-up {
+            animation: slideUp 0.5s ease;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        
+ <!-- Sidebar Navigation -->
+ <aside class="sidebar">
+    <div class="sidebar-header">
+        <div class="logo">
+            <div class="logo-icon"><i class="fas fa-balance-scale"></i></div>
+            <div class="logo-text">Legal<span>Learn</span></div>
+        </div>
+        <div class="sidebar-search">
+            <i class="fas fa-search"></i>
+            <input type="text" id="sidebarSearch" placeholder="Search legal topics...">
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
+    <ul class="nav-menu">
+        <li class="nav-item">
+            <a href="index.html" class="nav-link active">
+                <i class="fas fa-home"></i> Home
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="constitutional-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-balance-scale"></i> Constitutional Law
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="criminal-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-gavel"></i> Criminal Law
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="civil-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-book-reader"></i> Civil Law
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="corporate-business-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-briefcase"></i> Corporate & Business Law
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="intellectual-property-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-copyright"></i> Intellectual Property Law
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="taxation-laws.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-chart-pie"></i> Taxation Laws
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="cyber-it-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-shield-alt"></i> Cyber & IT Laws
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="consumer-protection-laws.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-shopping-cart"></i> Consumer Protection Laws
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="employment-labor-laws.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-building"></i> Employment & Labor Laws
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="enviornmental-laws.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-leaf"></i> Environmental Laws
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="alternative-dispute-resolution.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-handshake"></i> Alternative Dispute Resolution
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="legal-ethics.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-gavel"></i>Legal Ethics
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="international-trade-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-globe"></i>International Trade Law
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="human-rights.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-users"></i>Human Rights
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="faqs.html" class="nav-link">
+                <i class="fas fa-question-circle"></i> FAQs
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="resources.html" class="nav-link">
+                <i class="fas fa-book"></i> Resources
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="about.html" class="nav-link">
+                <i class="fas fa-info-circle"></i> About
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="contact-us.html" class="nav-link">
+                <i class="fas fa-envelope"></i> Contact
+            </a>
+        </li>
+    </ul>
+</aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="top-bar">
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <label class="theme-switch">
+                    <input type="checkbox" id="themeSwitch">
+                    <span class="slider"></span>
+                    <i class="fas fa-sun theme-icon sun-icon"></i>
+                    <i class="fas fa-moon theme-icon moon-icon"></i>
+                </label>
+            </div>
+            <section id="cyber-it-law" class="fade-in">
+                <h1 class="section-title">Cyber and IT Law</h1>
+                <p>Explore the critical aspects of Cyber and IT Law, including data privacy, cybersecurity offenses, intellectual property in technology, AI & blockchain, and digital evidence.</p>
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Introduction to Cyber and IT Law</h2>
+                            <i class="fas fa-globe card-icon"></i>
+                        </div>
+                        <div class="card-body">
+                            <p>Cyber and IT law is the body of laws, regulations, and legal principles that govern the use of digital technology, the internet, and electronic communications. It includes aspects such as cybercrimes, data protection, electronic contracts, and more.</p>
+                            <ul class="feature-list">
+                                <li class="feature-item"><i class="fas fa-check feature-icon"></i>Cybercrimes and punishments</li>
+                                <li class="feature-item"><i class="fas fa-check feature-icon"></i>Data protection and privacy</li>
+                                <li class="feature-item"><i class="fas fa-check feature-icon"></i>Electronic contracts and e-commerce laws</li>
+                                <li class="feature-item"><i class="fas fa-check feature-icon"></i>Intellectual property in the digital space</li>
+                                <li class="feature-item"><i class="fas fa-check feature-icon"></i>Liability of intermediaries</li>
+                                <li class="feature-item"><i class="fas fa-check feature-icon"></i>Online freedom of speech and content regulation</li>
+                                <li class="feature-item"><i class="fas fa-check feature-icon"></i>Cyberwarfare and international cyber law</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Cybercrime Laws</h2>
+                            <i class="fas fa-shield-alt card-icon"></i>
+                        </div>
+                        <div class="card-body">
+                            <p>Cybercrime laws define, prohibit, and penalize illegal activities carried out using digital means. These laws are usually part of criminal law.</p>
+                            <ul class="feature-list">
+                                <li class="feature-item"><i class="fas fa-check feature-icon"></i>Hacking & Unauthorized Access</li>
+                                <li class="feature-item"><i class="fas fa-check feature-icon"></i>Identity Theft & Phishing</li>
+                                <li class="feature-item"><i class="fas fa-check feature-icon"></i>Cyberstalking & Harassment</li>
+                                <li class="feature-item"><i class="fas fa-check feature-icon"></i>Data Theft & Cyber Espionage</li>
+                                <li class="feature-item"><i class="fas fa-check feature-icon"></i>Cyberterrorism</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Data Protection & Privacy Laws</h2>
+                            <i class="fas fa-user-shield card-icon"></i>
+                        </div>
+                        <div class="card-body">
+                            <p>Privacy and data protection laws regulate the collection, storage, processing, and transfer of personal data.</p>
+                            <ul class="feature-list">
+                                <li class="feature-item"><i class="fas fa-check feature-icon"></i>GDPR (EU)</li>
+                                <li class="feature-item"><i class="fas fa-check feature-icon"></i>CCPA (USA)</li>
+                                <li class="feature-item"><i class="fas fa-check feature-icon"></i>DPDP Act (India)</li>
+                                <li class="feature-item"><i class="fas fa-check feature-icon"></i>PIPL (China)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Electronic Contracts & E-Commerce Laws</h2>
+                            <i class="fas fa-file-contract card-icon"></i>
+                        </div>
+                        <div class="card-body">
+                            <p>E-commerce and digital transactions have legal recognition under various national and international laws.</p>
+                            <ul class="feature-list">
+                                <li class="feature-item"><i class="fas fa-check feature-icon"></i>Legal Recognition of E-Contracts</li>
+                                <li class="feature-item"><i class="fas fa-check feature-icon"></i>Consumer rights & fraud protection</li>
+                                <li class="feature-item"><i class="fas fa-check feature-icon"></i>Jurisdiction disputes in cross-border transactions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Intellectual Property (IP) Laws in Cyber Space</h2>
+                            <i class="fas fa-lightbulb card-icon"></i>
+                        </div>
+                        <div class="card-body">
+                            <p>Intellectual property law in cyberspace protects digital content, software, and online assets.</p>
+                            <ul class="feature-list">
+                                <li class="feature-item"><i class="fas fa-check feature-icon"></i>Copyright</li>
+                                <li class="feature-item"><i class="fas fa-check feature-icon"></i>Trademarks</li>
+                                <li class="feature-item"><i class="fas fa-check feature-icon"></i>Patents</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Intermediary Liability & Social Media Laws</h2>
+                            <i class="fas fa-network-wired card-icon"></i>
+                        </div>
+                        <div class="card-body">
+                            <p>Intermediary liability laws define the responsibility of platforms like Facebook, Google, and Twitter for user-generated content.</p>
+                            <ul class="feature-list">
+                                <li class="feature-item"><i class="fas fa-check feature-icon"></i>IT Rules, 2021 (India)</li>
+                                <li class="feature-item"><i class="fas fa-check feature-icon"></i>Section 230, Communications Decency Act (USA)</li>
+                                <li class="feature-item"><i class="fas fa-check feature-icon"></i>Digital Services Act (EU)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Cyberwarfare & International Cyber Law</h2>
+                            <i class="fas fa-shield-virus card-icon"></i>
+                        </div>
+                        <div class="card-body">
+                            <p>Cyberwarfare laws regulate attacks on national security through digital means.</p>
+                            <ul class="feature-list">
+                                <li class="feature-item"><i class="fas fa-check feature-icon"></i>Tallinn Manual</li>
+                                <li class="feature-item"><i class="fas fa-check feature-icon"></i>Budapest Convention</li>
+                                <li class="feature-item"><i class="fas fa-check feature-icon"></i>UN Cybersecurity Initiatives</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">About LegalLearn</h3>
+                <p>LegalLearn is a modern platform dedicated to providing comprehensive legal education resources. Our mission is to make legal knowledge accessible and understandable for everyone.</p>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li class="footer-link"><a href="#home">Home</a></li>
+                    <li class="footer-link"><a href="#categories">Categories</a></li>
+                    <li class="footer-link"><a href="#">FAQs</a></li>
+                    <li class="footer-link"><a href="#">Resources</a></li>
+                    <li class="footer-link"><a href="#">About</a></li>
+                    <li class="footer-link"><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Contact Us</h3>
+                <p>If you have any questions or need further information, feel free to reach out to us.</p>
+                <p>Email: support@legallearn.com</p>
+                <p>Phone: +1 234 567 890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 LegalLearn. All rights reserved.
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const themeSwitch = document.getElementById('themeSwitch');
+            const body = document.body;
+
+            themeSwitch.addEventListener('change', function () {
+                if (this.checked) {
+                    body.setAttribute('data-theme', 'dark');
+                } else {
+                    body.removeAttribute('data-theme');
+                }
+            });
+
+            const menuToggle = document.getElementById('menuToggle');
+            const sidebar = document.querySelector('.sidebar');
+            const overlay = document.getElementById('overlay');
+
+            menuToggle.addEventListener('click', function () {
+                sidebar.classList.toggle('active');
+                overlay.classList.toggle('active');
+            });
+
+            overlay.addEventListener('click', function () {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+
+            const expandableTriggers = document.querySelectorAll('.expandable-trigger');
+            expandableTriggers.forEach(trigger => {
+                trigger.addEventListener('click', function () {
+                    this.classList.toggle('active');
+                    const content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Alternative Dispute Resolution (ADR) methods including arbitration, mediation, conciliation, and negotiation.">
+    <meta property="og:title" content="Alternative Dispute Resolution - LegalLearn">
+    <meta property="og:description" content="Comprehensive guide to out-of-court dispute resolution methods and their practical applications.">
+    <meta property="og:type" content="website">
+    <title>Alternative Dispute Resolution - LegalLearn</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <style>
+        :root {
+            --primary: #0a2c5a;
+            --secondary: #d4af37;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        [data-theme="dark"] {
+            --primary: #1a4b8c;
+            --light: #212529;
+            --dark: #f8f9fa;
+            --gray: #adb5bd;
+            --light-gray: #343a40;
+            --white: #2b3035;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Page-specific styles */
+        .adr-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .method-card {
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .method-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .method-header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        .method-icon {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            color: var(--secondary);
+        }
+
+        .method-body {
+            padding: 1.5rem;
+        }
+
+        .method-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .method-list li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .method-list li i {
+            color: var(--secondary);
+            margin-right: 0.8rem;
+            margin-top: 0.3rem;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: var(--white);
+            box-shadow: var(--shadow);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .comparison-table th {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .comparison-table tr:hover {
+            background: var(--light-gray);
+        }
+
+        .case-study {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin: 2rem 0;
+        }
+
+        .case-study h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .case-study .details {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: var(--light-gray);
+            border-radius: 4px;
+        }
+
+        .process-steps {
+            counter-reset: step;
+            margin: 2rem 0;
+        }
+
+        .step {
+            position: relative;
+            padding: 1rem 1rem 1rem 3rem;
+            margin-bottom: 1rem;
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .step::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 30px;
+            background: var(--secondary);
+            color: var(--dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .legal-framework {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin: 2rem 0;
+        }
+
+        .legal-framework h3 {
+            color: var(--primary);
+            margin: 1.5rem 0 1rem;
+        }
+
+        .legal-framework h3:first-child {
+            margin-top: 0;
+        }
+
+        .advantages-limitations {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .advantages, .limitations {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .advantages h3 {
+            color: #28a745;
+            margin-bottom: 1rem;
+        }
+
+        .limitations h3 {
+            color: #dc3545;
+            margin-bottom: 1rem;
+        }
+
+        .advantages .fas.fa-plus {
+            color: #28a745;
+        }
+
+        .limitations .fas.fa-minus {
+            color: #dc3545;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 2rem 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-title {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 30px;
+            height: 2px;
+            background-color: var(--secondary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-link {
+            padding: 0.4rem 0;
+        }
+
+        .footer-link a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-link a:hover {
+            color: var(--secondary);
+            padding-left: 0.5rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 40px;
+            height: 40px;
+            background: var(--secondary);
+            color: var(--dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @media screen and (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+            }
+            .footer-section {
+                margin-bottom: 2rem;
+            }
+            .advantages-limitations {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo">
+                <i class="fas fa-balance-scale logo-icon"></i>
+                <span class="logo-text">LegalLearn</span>
+            </a>
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search legal topics...">
+            </div>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-scroll"></i>
+                    Constitutional Law
+                    <i class="fas fa-chevron-down arrow"></i>
+                </a>
+                <ul class="nav-dropdown">
+                    <li><a href="fundamental-rights.html" class="nav-link">Fundamental Rights</a></li>
+                    <li><a href="constitutional-law.html" class="nav-link">Constitutional Overview</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-balance-scale"></i>
+                    Criminal Law
+                    <i class="fas fa-chevron-down arrow"></i>
+                </a>
+                <ul class="nav-dropdown">
+                    <li><a href="criminal-law.html" class="nav-link">Criminal Law Overview</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-gavel"></i>
+                    Civil Law
+                    <i class="fas fa-chevron-down arrow"></i>
+                </a>
+                <ul class="nav-dropdown">
+                    <li><a href="civil-law.html" class="nav-link">Civil Law Overview</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="corporate-business-law.html" class="nav-link">
+                    <i class="fas fa-building"></i>
+                    Corporate & Business Law
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="intellectual-property-law.html" class="nav-link">
+                    <i class="fas fa-lightbulb"></i>
+                    Intellectual Property Law
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="taxation-laws.html" class="nav-link">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    Taxation Laws
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="cyber-it-law.html" class="nav-link">
+                    <i class="fas fa-laptop-code"></i>
+                    Cyber & IT Laws
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="consumer-protection-laws.html" class="nav-link">
+                    <i class="fas fa-user-shield"></i>
+                    Consumer Protection Laws
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="employment-labor-laws.html" class="nav-link">
+                    <i class="fas fa-users"></i>
+                    Employment & Labor Laws
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="enviornmental-laws.html" class="nav-link">
+                    <i class="fas fa-leaf"></i>
+                    Environmental Laws
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="human-rights.html" class="nav-link">
+                    <i class="fas fa-hands-helping"></i>
+                    Human Rights
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="international-trade-law.html" class="nav-link">
+                    <i class="fas fa-globe"></i>
+                    International Trade Law
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a href="alternative-dispute-resolution.html" class="nav-link">
+                    <i class="fas fa-handshake"></i>
+                    Alternative Dispute Resolution
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="resources.html" class="nav-link">
+                    <i class="fas fa-book"></i>
+                    Resources
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="about.html" class="nav-link">
+                    <i class="fas fa-info-circle"></i>
+                    About Us
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="contact-us.html" class="nav-link">
+                    <i class="fas fa-envelope"></i>
+                    Contact Us
+                </a>
+            </li>
+        </ul>
+        <label class="theme-switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+    </nav>
+
+    <div class="container">
+        <main class="main-content">
+            <h1 class="section-title">Alternative Dispute Resolution (ADR)</h1>
+            <p>Alternative Dispute Resolution (ADR) refers to methods of resolving disputes outside the traditional court system. These methods are often faster, less expensive, and more flexible than litigation, while maintaining confidentiality and preserving relationships between parties.</p>
+
+            <div class="adr-methods">
+                <div class="method-card">
+                    <div class="method-header">
+                        <h2>Arbitration</h2>
+                        <i class="fas fa-gavel method-icon"></i>
+                    </div>
+                    <div class="method-body">
+                        <p>A private process where disputing parties agree to let an arbitrator hear their case and make a decision.</p>
+                        <ul class="method-list">
+                            <li><i class="fas fa-check"></i>Binding decisions</li>
+                            <li><i class="fas fa-check"></i>Expert arbitrators</li>
+                            <li><i class="fas fa-check"></i>Formal procedures</li>
+                            <li><i class="fas fa-check"></i>Confidential process</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="method-card">
+                    <div class="method-header">
+                        <h2>Mediation</h2>
+                        <i class="fas fa-handshake method-icon"></i>
+                    </div>
+                    <div class="method-body">
+                        <p>A voluntary process where a neutral mediator helps parties reach a mutually acceptable solution.</p>
+                        <ul class="method-list">
+                            <li><i class="fas fa-check"></i>Voluntary participation</li>
+                            <li><i class="fas fa-check"></i>Facilitated negotiation</li>
+                            <li><i class="fas fa-check"></i>Non-binding process</li>
+                            <li><i class="fas fa-check"></i>Preserves relationships</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="method-card">
+                    <div class="method-header">
+                        <h2>Conciliation</h2>
+                        <i class="fas fa-dove method-icon"></i>
+                    </div>
+                    <div class="method-body">
+                        <p>Similar to mediation but the conciliator takes a more active role in suggesting solutions.</p>
+                        <ul class="method-list">
+                            <li><i class="fas fa-check"></i>Active solution proposal</li>
+                            <li><i class="fas fa-check"></i>Informal process</li>
+                            <li><i class="fas fa-check"></i>Flexible approach</li>
+                            <li><i class="fas fa-check"></i>Focus on settlement</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="method-card">
+                    <div class="method-header">
+                        <h2>Negotiation</h2>
+                        <i class="fas fa-comments method-icon"></i>
+                    </div>
+                    <div class="method-body">
+                        <p>Direct communication between parties to resolve disputes without third-party intervention.</p>
+                        <ul class="method-list">
+                            <li><i class="fas fa-check"></i>Direct communication</li>
+                            <li><i class="fas fa-check"></i>Cost-effective</li>
+                            <li><i class="fas fa-check"></i>Complete control</li>
+                            <li><i class="fas fa-check"></i>Informal setting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title">Comparison of ADR Methods</h2>
+            <div class="table-responsive">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Arbitration</th>
+                            <th>Mediation</th>
+                            <th>Conciliation</th>
+                            <th>Negotiation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Third Party Role</td>
+                            <td>Decision maker</td>
+                            <td>Facilitator</td>
+                            <td>Active advisor</td>
+                            <td>None</td>
+                        </tr>
+                        <tr>
+                            <td>Binding Nature</td>
+                            <td>Binding</td>
+                            <td>Non-binding</td>
+                            <td>Non-binding</td>
+                            <td>By agreement</td>
+                        </tr>
+                        <tr>
+                            <td>Formality</td>
+                            <td>Formal</td>
+                            <td>Semi-formal</td>
+                            <td>Informal</td>
+                            <td>Very informal</td>
+                        </tr>
+                        <tr>
+                            <td>Cost</td>
+                            <td>Moderate-High</td>
+                            <td>Moderate</td>
+                            <td>Low-Moderate</td>
+                            <td>Low</td>
+                        </tr>
+                        <tr>
+                            <td>Time Frame</td>
+                            <td>3-12 months</td>
+                            <td>1-3 months</td>
+                            <td>1-2 months</td>
+                            <td>Variable</td>
+                        </tr>
+                        <tr>
+                            <td>Party Control</td>
+                            <td>Limited</td>
+                            <td>High</td>
+                            <td>High</td>
+                            <td>Complete</td>
+                        </tr>
+                        <tr>
+                            <td>Confidentiality</td>
+                            <td>High</td>
+                            <td>High</td>
+                            <td>High</td>
+                            <td>Variable</td>
+                        </tr>
+                        <tr>
+                            <td>Expertise Required</td>
+                            <td>Legal/Technical</td>
+                            <td>Communication</td>
+                            <td>Subject Matter</td>
+                            <td>None Specific</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 class="section-title">ADR Process Steps</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <h3>Initial Assessment</h3>
+                    <p>Evaluate the dispute and determine the most appropriate ADR method.</p>
+                </div>
+                <div class="step">
+                    <h3>Selection of Method</h3>
+                    <p>Choose between arbitration, mediation, conciliation, or negotiation based on the situation.</p>
+                </div>
+                <div class="step">
+                    <h3>Preparation</h3>
+                    <p>Gather relevant documents, evidence, and prepare your position.</p>
+                </div>
+                <div class="step">
+                    <h3>ADR Session</h3>
+                    <p>Participate in the chosen ADR process with all parties involved.</p>
+                </div>
+                <div class="step">
+                    <h3>Resolution</h3>
+                    <p>Reach an agreement or receive a decision, depending on the method used.</p>
+                </div>
+            </div>
+
+            <h2 class="section-title">Case Study</h2>
+            <div class="case-study">
+                <h3>Commercial Contract Dispute Resolution</h3>
+                <div class="details">
+                    <p><strong>Scenario:</strong> Two companies in a supply chain dispute over delivery delays and quality issues.</p>
+                    <p><strong>Method Used:</strong> Mediation</p>
+                    <p><strong>Outcome:</strong> Agreement reached with revised delivery schedules and quality control measures.</p>
+                </div>
+                <p><strong>Key Learnings:</strong></p>
+                <ul class="method-list">
+                    <li><i class="fas fa-check"></i>Preserved business relationship</li>
+                    <li><i class="fas fa-check"></i>Cost-effective resolution</li>
+                    <li><i class="fas fa-check"></i>Quick settlement (2 sessions)</li>
+                    <li><i class="fas fa-check"></i>Confidentiality maintained</li>
+                </ul>
+            </div>
+
+            <h2 class="section-title">Legal Framework for ADR</h2>
+            <div class="legal-framework">
+                <h3>Key Legislation</h3>
+                <ul class="method-list">
+                    <li><i class="fas fa-check"></i>Arbitration and Conciliation Act, 1996</li>
+                    <li><i class="fas fa-check"></i>Civil Procedure Code (Section 89)</li>
+                    <li><i class="fas fa-check"></i>Legal Services Authorities Act, 1987</li>
+                    <li><i class="fas fa-check"></i>Commercial Courts Act, 2015</li>
+                </ul>
+                
+                <h3>Enforcement of ADR Decisions</h3>
+                <ul class="method-list">
+                    <li><i class="fas fa-check"></i>Arbitral awards are enforceable like court decrees</li>
+                    <li><i class="fas fa-check"></i>Mediated settlements can be made court orders</li>
+                    <li><i class="fas fa-check"></i>International enforcement through New York Convention</li>
+                    <li><i class="fas fa-check"></i>Limited grounds for challenging ADR outcomes</li>
+                </ul>
+            </div>
+
+            <h2 class="section-title">Advantages and Limitations</h2>
+            <div class="advantages-limitations">
+                <div class="advantages">
+                    <h3>Advantages</h3>
+                    <ul class="method-list">
+                        <li><i class="fas fa-plus"></i>Time and cost-effective</li>
+                        <li><i class="fas fa-plus"></i>Confidentiality maintained</li>
+                        <li><i class="fas fa-plus"></i>Flexible procedures</li>
+                        <li><i class="fas fa-plus"></i>Preserves relationships</li>
+                        <li><i class="fas fa-plus"></i>Expert decision-makers</li>
+                        <li><i class="fas fa-plus"></i>Party autonomy</li>
+                    </ul>
+                </div>
+                <div class="limitations">
+                    <h3>Limitations</h3>
+                    <ul class="method-list">
+                        <li><i class="fas fa-minus"></i>Power imbalances may affect outcomes</li>
+                        <li><i class="fas fa-minus"></i>Limited precedential value</li>
+                        <li><i class="fas fa-minus"></i>May require court intervention</li>
+                        <li><i class="fas fa-minus"></i>Not suitable for all disputes</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">About LegalLearn</h3>
+                <p>Comprehensive legal education platform making law accessible and understandable for everyone.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li class="footer-link"><a href="constitutional-law.html">Constitutional Law</a></li>
+                    <li class="footer-link"><a href="criminal-law.html">Criminal Law</a></li>
+                    <li class="footer-link"><a href="civil-law.html">Civil Law</a></li>
+                    <li class="footer-link"><a href="corporate-law.html">Corporate Law</a></li>
+                    <li class="footer-link"><a href="resources.html">Resources</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Contact Info</h3>
+                <ul class="footer-links">
+                    <li class="footer-link">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@legallearn.com">info@legallearn.com</a>
+                    </li>
+                    <li class="footer-link">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+1234567890">+1 (234) 567-890</a>
+                    </li>
+                    <li class="footer-link">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>New Delhi, India</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Newsletter</h3>
+                <p>Subscribe to our newsletter for legal updates and insights.</p>
+                <form class="subscribe-form">
+                    <input type="email" class="subscribe-input" placeholder="Enter your email">
+                    <button type="submit" class="subscribe-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> LegalLearn. All rights reserved.</p>
+        </div>
+
+        <button class="back-to-top" id="backToTop">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <script src="js/navigation.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Back to top button functionality
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>

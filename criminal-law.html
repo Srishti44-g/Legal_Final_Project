@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive legal education platform covering criminal law, corporate law, taxation, human rights, cybersecurity, dispute resolution, and environmental law.">
+    <meta property="og:title" content="LegalLearn - Modern Legal Education Platform">
+    <meta property="og:description" content="Access structured, user-friendly legal education resources across all major domains of law.">
+    <meta property="og:type" content="website">
+    <title>LegalLearn - Criminal Law</title>
+    <link rel="stylesheet" href="assets/css/criminal-law.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <div class="logo-icon"><i class="fas fa-balance-scale"></i></div>
+                    <div class="logo-text">Legal<span>Learn</span></div>
+                </div>
+                <div class="sidebar-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="sidebarSearch" placeholder="Search legal topics...">
+                    <div class="search-results" id="searchResults"></div>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="constitutional-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-balance-scale"></i> Constitutional Law
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="criminal-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-gavel"></i> Criminal Law
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="civil-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-book-reader"></i> Civil Law
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="corporate-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-briefcase"></i> Corporate & Business Law
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="ip-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-copyright"></i> Intellectual Property Law
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="taxation.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-chart-pie"></i> Taxation Laws
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="cyber-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-shield-alt"></i> Cyber & IT Laws
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="consumer-protection-laws.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-shopping-cart"></i> Consumer Protection Laws
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="employment-labor-laws.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-building"></i> Employment & Labor Laws
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="enviornmental-laws.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-leaf"></i> Environmental Laws
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="alternative-dispute-resolution.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-handshake"></i> Alternative Dispute Resolution
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="legal-ethics.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-gavel"></i>Legal Ethics
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="international-trade-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-globe"></i>International Trade Law
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="human-rights.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-users"></i>Human Rights
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="faqs.html" class="nav-link">
+                        <i class="fas fa-question-circle"></i> FAQs
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="resources.html" class="nav-link">
+                        <i class="fas fa-book"></i> Resources
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">
+                        <i class="fas fa-info-circle"></i> About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact-us.html" class="nav-link">
+                        <i class="fas fa-envelope"></i> Contact
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="top-bar">
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <label class="theme-switch">
+                    <input type="checkbox" id="themeSwitch">
+                    <span class="slider"></span>
+                    <i class="fas fa-sun theme-icon sun-icon"></i>
+                    <i class="fas fa-moon theme-icon moon-icon"></i>
+                </label>
+            </div>
+            <section id="criminal-law" class="fade-in">
+                <h1 class="section-title">Criminal Law</h1>
+                <p>Explore various aspects of Criminal Law including IPC, CrPC, NDPS, POCSO, and Cybercrime.</p>
+            </section>
+            <div class="content-section fade-in">
+                <div class="intro-section fade-in">
+                    <h1 class="section-heading">📜 Criminal Law of India</h1>
+                    
+                    <div class="intro-text">
+                        <p>Criminal law is the body of law that deals with offenses against society and prescribes punishments for crimes. It aims to maintain law and order by punishing wrongdoers and ensuring justice for victims.</p>
+                    </div>
+                
+                    <div class="major-laws">
+                        <h3>Major Governing Laws</h3>
+                        <ul class="laws-list">
+                            <li>
+                                <div class="law-icon">
+                                    <i class="fas fa-book-law"></i> 
+                                </div>
+                                <div class="law-content">
+                                    <h4>Indian Penal Code (IPC), 1860</h4>
+                                    <p>The primary criminal code that defines crimes and prescribes punishments</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="law-icon">
+                                    <i class="fas fa-gavel"></i>
+                                </div>
+                                <div class="law-content">
+                                    <h4>Code of Criminal Procedure (CrPC), 1973</h4>
+                                    <p>Establishes the procedural aspects of investigation, trial, and punishment</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="law-icon">
+                                    <i class="fas fa-balance-scale"></i>
+                                </div>
+                                <div class="law-content">
+                                    <h4>Indian Evidence Act, 1872</h4>
+                                    <p>Sets rules for admitting and examining evidence in courts</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                
+                    <div class="special-laws">
+                        <h3>Additional Special Laws</h3>
+                        <ul class="laws-list">
+                            <li>
+                                <div class="law-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="law-content">
+                                    <h4>NDPS Act (Narcotic Drugs & Psychotropic Substances Act)</h4>
+                                    <p>Deals with drug-related offenses and their prevention</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="law-icon">
+                                    <i class="fas fa-child"></i>
+                                </div>
+                                <div class="law-content">
+                                    <h4>POCSO Act (Protection of Children from Sexual Offences)</h4>
+                                    <p>Specifically addresses sexual offenses against children</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="law-icon">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <div class="law-content">
+                                    <h4>IT Act, 2000 (Cybercrime Laws)</h4>
+                                    <p>Covers electronic crimes and digital evidence</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <section id="ipc" class="card slide-up">
+                    <div class="card-header">
+                        <h2>1️⃣ Indian Penal Code (IPC), 1860</h2>
+                        <br>
+                        <p>The IPC is the primary law that defines crimes and prescribes punishments. It is divided into 23 Chapters and 511 Sections, covering various offenses.</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="legal-reference">
+                            <h3>🔹 Classification of Offenses Under IPC</h3><br>
+                            <div class="law-content">
+                                <h4> (A) Offenses Against the Human Body</h4><br>
+                                <ul class="checklist">
+                                    <!-- Add more offenses -->
+                                    <li><strong>Murder (Section 302) –</strong> Killing a person with intent</li>
+                                    <li><strong>Culpable Homicide (Section 299 & 304) –</strong> Killing without intention</li>
+                                    <li><strong>Attempt to Murder (Section 307) –</strong> Unsuccessful attempt to kill</li>
+                                    <li><strong>Causing Death by Negligence (Section 304A) –</strong> Death due to reckless actions</li>
+                                    <li><strong>Assault (Section 351-358) –</strong> Causing fear of harm or injury</li>
+                                    <li><strong>Hurt & Grievous Hurt (Sections 319-338) –</strong> Physical injuries, severe injuries</li>                                     
+                                </ul>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="card-body">
+                        <div class="legal-reference">
+                            <div class="law-content">
+                                <h4>(B) Offenses Against Women & Children</h4><br>
+                                <ul class="checklist">
+                                    <!-- Add more offenses -->
+                                    <li><strong> Rape (Section 375 & 376) –</strong>Sexual assault against a woman</li>
+                                    <li><strong>Sexual Harassment (Section 354A)  –</strong> Unwelcome advances, molestation</li>
+                                    <li><strong> Dowry Death (Section 304B)  –</strong> Death due to dowry harassment</li>
+                                    <li><strong>Cruelty (Section 498A)  –</strong> Death due to reckless actions</li>
+                                    <li><strong>Assault (Section 351-358) –</strong> Domestic violence against women</li>
+                                    <li><strong>Child Abuse (POCSO Act, 2012)  –</strong>Protection of children from sexual offenses</li>                                     
+                                </ul>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="legal-reference">
+                                <div class="law-content">
+                                    <h4> (C) Offenses Against Property</h4><br>
+                                    <ul class="checklist">
+                                        <!-- Add more offenses -->
+                                        <li><strong> Theft (Section 378-382) –</strong> Stealing movable property</li>
+                                        <li><strong> Extortion (Section 383-389) –</strong>Forcing someone to give property using fear</li>
+                                        <li><strong>Robbery (Section 390-392)  –</strong> Theft with violence or threat</li>                                        </li>
+                                        <li><strong>Dacoity (Section 395-398)  –</strong> Death due to reckless actions</li>
+                                        <li><strong>Assault (Section 351-358) –</strong> Robbery committed by five or more persons</li>
+                                        <li><strong>Criminal Trespass (Section 441-447) –</strong>Unlawful entry into property</li>                                     
+                                    </ul>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="legal-reference">
+                                    <div class="law-content">
+                                        <h4>(D) Offenses Against Public Order</h4><br>
+                                        <ul class="checklist">
+                                            <!-- Add more offenses -->
+                                            <li><strong> Unlawful Assembly & Rioting (Sections 141-160) –</strong> Disturbing peace</li>
+                                            <li><strong>Public Nuisance (Section 268-290) –</strong>  Actions affecting public life</li>
+                                            <li><strong>Promoting Hatred (Section 153A, 295A) –</strong>  Spreading communal hatred</li>                                     
+                                        </ul>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="legal-reference">
+                                        <div class="law-content">
+                                            <h4>(E) White-Collar Crimes & Cyber Crimes</h4><br>
+                                            <ul class="checklist">
+                                                <!-- Add more offenses -->
+                                                <li><strong> Cheating (Section 415-420)  –</strong>  Fraudulent deception for gain</li>
+                                                <li><strong>Forgery (Section 463-471) –</strong> Creating fake documents</li>
+                                                <li><strong>Cybercrime (IT Act, 2000) –</strong> Hacking, phishing, identity theft</li>                                     
+                                                <li><strong>Money Laundering (PMLA Act, 2002)  –</strong>Concealing illegal money</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    </div> 
+                                    <div class="card-body">
+                                        <div class="legal-reference">
+                                            <div class="law-content">
+                                                <h4>(F) Offenses Against the State</h4><br>
+                                                <ul class="checklist">
+                                                    <!-- Add more offenses -->
+                                                    <li><strong>  Sedition (Section 124A)   –</strong>Anti-national activities</li>
+                                                    <li><strong> Treason (Section 121) –</strong> Waging war against the country</li>
+                                                    <li><strong> Terrorism (UAPA Act, 1967)  –</strong>Acts threatening national security</li>                                     
+                                            </ul>
+                                            </div>
+                                        </div>
+                                        </div>   
+                </section>
+        
+                <section id="crpc" class="card slide-up">
+                    <div class="card-header">
+                        <h2>2️⃣ Code of Criminal Procedure (CrPC), 1973</h2><br>
+                        <p>CrPC lays down procedures for investigation, arrest, trial, and punishment. It categorizes offenses as:</p><br>
+                        <ul>
+                           <strong>🔹 Cognizable Offenses</strong> – Serious crimes (murder, rape) where police can arrest without a warrant<br>
+                            <strong>🔹 Non-Cognizable Offenses</strong>Less serious crimes (cheating, defamation) where police need court approval for arrest<br>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <h3>🔹 Stages of a Criminal Case Under CrPC</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <h4>1️⃣ Filing of FIR (First Information Report) (Section 154) </h4>
+                                <p>Victim reports a crime to the police</p>
+                            </div>
+                            <!-- Add more stages -->
+                            <div class="timeline-item">
+                                <h4>2️⃣ Investigation & Evidence Collection (Section 156-159)</h4>
+                                <p> Police gather evidence</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4>2️⃣ Investigation & Evidence Collection (Section 156-159)</h4>
+                                <p> Police gather evidence</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4>3️⃣ Arrest & Bail (Sections 41-60))</h4>
+                                <p>  Accused is arrested or granted bail</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4>4️⃣ Filing of Charge Sheet (Section 173) </h4>
+                                <p> Police submit findings to court</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4>5️⃣ Trial Process (Sections 225-237) </h4>
+                                <p>  Court delivers verdict and punishment/p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4>6️⃣ Judgment & Sentencing (Sections 248-250) </h4>
+                                <p> Police gather evidence</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4>7️⃣ Appeals & Revisions (Sections 374-394) </h4>
+                                <p> Convicted person can appeal in higher courts</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        
+                <!-- Additional sections for Evidence Act, Special Laws, etc. -->
+                <section id="indian-evidence" class="card slide-up">
+                    <div class="card-header">
+                        <h2>3️⃣ Indian Evidence Act, 1872</h2><br>
+                        <p>Defines rules for admissibility of evidence in courts.</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="case-box">
+                            <h3 class="case-title">🔹 Types of Evidence:</h3>
+                            <br>
+                            <ul class="checklist">
+                                <li>Direct Evidence –  Eyewitness testimony</li>
+                                <li>Circumstantial Evidence  –  Indirect proof linking the accused to crime</li>
+                                <li>Documentary Evidence – Written records, contracts, digital data</li>
+                                <li>Electronic Evidence (Section 65B IT Act) – Emails, CCTV footage, call recordings</li></ul>
+                                <br>
+                                <h3 class="case-title">🔹 Burden of Proof:</h3>
+                                <br>
+                                <ul class="checklist"> 
+                                <li> Criminal cases – Prosecution must prove guilt beyond a reasonable doubt</li>
+                                <li>Defenses in Criminal Law – Insanity, self-defense, mistaken identity</li> 
+                            </ul>
+                        </div>
+                        <!-- Add more cases -->
+                    </div>
+                </section>
+                <section id="special-criminal-laws" class="card slide-up">
+                    <div class="card-header">
+                        <h2>4️⃣ Special Criminal Laws in India</h2><br>
+                        <p>Apart from IPC, CrPC, and Evidence Act, several special laws handle specific crimes:                        </p>
+                    </div>
+                    <div class="card-body">
+                        <div class="case-box">
+                            <h3 class="case-title">🔹 Narcotic Drugs and Psychotropic Substances (NDPS) Act, 1985</h3>
+                            <p>Drug-related crimes</p>
+                        </div>
+                    </div>   
+                        
+                    <div class="card-body">     
+                        <div class="case-box">
+                            <h3 class="case-title">🔹 Protection of Children from Sexual Offenses (POCSO) Act, 2012  </h3>
+                            <p> Child sexual abuse cases</p>
+                        </div>
+                    </div>
+                    <div class="card-body">    
+                        <div class="case-box">
+                            <h3 class="case-title"> 🔹 Scheduled Castes and Scheduled Tribes (Prevention of Atrocities) Act, 1989 </h3>
+                            <p>Crimes against SC/ST</p>
+                        </div>
+                    </div>  
+                    <div class="card-body">      
+                        <div class="case-box">
+                            <h3 class="case-title"> 🔹 Unlawful Activities (Prevention) Act (UAPA), 1967</h3>
+                            <p>Anti-terrorism laws</p>
+                        </div>
+                    </div>
+                    <div class="card-body">  
+                        <div class="case-box">
+                            <h3 class="case-title">🔹Prevention of Money Laundering Act (PMLA), 2002 </h3>
+                            <p>Financial crimes</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="punishment-criminal" class="card slide-up">
+                    <div class="card-header">
+                        <h2>5️⃣ Punishments Under Criminal Law</h2><br>
+                        <p>Punishments are given based on the severity of the crime.</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="case-box">
+                            <ul>
+                                <li><strong> Capital Punishment (Death Sentence) </strong> –Rare cases (e.g., terrorism, brutal murder)</li>
+                                <li><strong> Life Imprisonment</strong> – Rape, murder, treason</li>
+                                <li><strong> Imprisonment</strong> –Rigorous (with hard labor) or simple (without hard labor)</li>
+                                <li><strong>A Fine</strong> – Monetary penalty</li>
+                                <li><strong> Probation & Community Service</strong> –For first-time offenders</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section id="landmark-cases" class="card slide-up">
+                    <div class="card-header">
+                        <h2>6️⃣ Landmark Criminal Law Cases</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="case-box">
+                            <h3 class="case-title">State of Maharashtra v. Kasab (2012)</h3>
+                            <p>26/11 Mumbai terrorist attack trial</p>
+                        </div>
+                    </div>   
+                        
+                    <div class="card-body">     
+                        <div class="case-box">
+                            <h3 class="case-title">Nirbhaya Case (2012) </h3>
+                            <p>Rape and murder case that led to stricter laws</p>
+                        </div>
+                    </div>
+                    <div class="card-body">    
+                        <div class="case-box">
+                            <h3 class="case-title"> Shah Bano Case (1985) </h3>
+                            <p>Women's rights in Muslim personal law</p>
+                        </div>
+                    </div>  
+                    <div class="card-body">      
+                        <div class="case-box">
+                            <h3 class="case-title"> Maneka Gandhi Case (1978) </h3>
+                            <p> Expanded the meaning of "Right to Life"</p>
+                        </div>
+                    </div>
+                    <div class="card-body">  
+                        <div class="case-box">
+                            <h3 class="case-title"> Vishaka v. State of Rajasthan (1997)</h3>
+                            <p>Guidelines for sexual harassment at the workplace</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        
+            <div class="navigation-dots">
+                <span class="nav-dot active" data-section="ipc"></span>
+                <span class="nav-dot" data-section="crpc"></span>
+                <span class="nav-dot" data-section="landmark-cases"></span>
+            </div>
+        </main>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">About LegalLearn</h3>
+                <p>LegalLearn is a modern platform dedicated to providing comprehensive legal education resources. Our mission is to make legal knowledge accessible and understandable for everyone.</p>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li class="footer-link"><a href="#home">Home</a></li>
+                    <li class="footer-link"><a href="#categories">Categories</a></li>
+                    <li class="footer-link"><a href="#">FAQs</a></li>
+                    <li class="footer-link"><a href="#">Resources</a></li>
+                    <li class="footer-link"><a href="#">About</a></li>
+                    <li class="footer-link"><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Contact Us</h3>
+                <p>If you have any questions or need further information, feel free to reach out to us.</p>
+                <p>Email: support@legallearn.com</p>
+                <p>Phone: +1 234 567 890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 LegalLearn. All rights reserved.
+        </div>
+    </footer>
+    <script src="assets/js/criminal-law.js"></script>
+</body>
+</html>

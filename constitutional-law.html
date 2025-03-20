@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive legal education platform covering criminal law, corporate law, taxation, human rights, cybersecurity, dispute resolution, and environmental law.">
+    <meta property="og:title" content="LegalLearn - Modern Legal Education Platform">
+    <meta property="og:description" content="Access structured, user-friendly legal education resources across all major domains of law.">
+    <meta property="og:type" content="website">
+    <title> LegalLearn- Constitutional Law</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <div class="logo-icon"><i class="fas fa-balance-scale"></i></div>
+                    <div class="logo-text">Legal<span>Learn</span></div>
+                </div>
+                <div class="sidebar-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="sidebarSearch" placeholder="Search legal topics...">
+                    <div class="search-results" id="searchResults"></div>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="constitutional-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-balance-scale"></i> Constitutional Law
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="criminal-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-gavel"></i> Criminal Law
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="civil-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-book-reader"></i> Civil Law
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="corporate-business-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-briefcase"></i> Corporate & Business Law
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="intellectual-property-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-copyright"></i> Intellectual Property Law
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="taxation-laws.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-chart-pie"></i> Taxation Laws
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="cyber-it-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-shield-alt"></i> Cyber & IT Laws
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="consumer-protection-laws.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-shopping-cart"></i> Consumer Protection Laws
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="employment-labor-laws.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-building"></i> Employment & Labor Laws
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="enviornmental-laws.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-leaf"></i> Environmental Laws
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="alternative-dispute-resolution.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-handshake"></i> Alternative Dispute Resolution
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="legal-ethics.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-gavel"></i>Legal Ethics
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="international-trade-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-globe"></i>International Trade Law
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="human-rights.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-users"></i>Human Rights
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="faqs.html" class="nav-link">
+                        <i class="fas fa-question-circle"></i> FAQs
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="resources.html" class="nav-link">
+                        <i class="fas fa-book"></i> Resources
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">
+                        <i class="fas fa-info-circle"></i> About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact-us.html" class="nav-link">
+                        <i class="fas fa-envelope"></i> Contact
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="top-bar">
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <label class="theme-switch">
+                    <input type="checkbox" id="themeSwitch">
+                    <span class="slider"></span>
+                    <i class="fas fa-sun theme-icon sun-icon"></i>
+                    <i class="fas fa-moon theme-icon moon-icon"></i>
+                </label>
+            </div>
+            <div class="content-section">
+                <section id="civil-law" class="fade-in">
+                    <h1 class="section-title">Constitutional Law </h1>
+                    <p>Explore fundamental rights, directive principles, federal structure, and constitutional authorities.</p>
+                </section>
+                <br>
+                <div class="legal-reference">
+                    <h2>🔹 Introduction to Constitutional Law</h2>
+                    <p>Constitutional law is the supreme legal framework that defines the structure, functions, powers, and responsibilities of the government and guarantees fundamental rights to citizens. The Constitution of India (1950) is the longest written constitution in the world and serves as the fundamental law of the country.</p>
+                </div>
+                <div class="legal-reference">
+                    <h2>📌 Structure of the Indian Constitution</h2>
+                    <p>The Constitution consists of 470 Articles, 25 Parts, and 12 Schedules, covering various aspects such as fundamental rights, the structure of government, directive principles, and emergency provisions.</p>
+                </div>
+
+                <section id="preamble" class="card slide-up">
+                    <div class="card-header">
+                        <h2>1️⃣ Preamble – The Spirit of the Constitution</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>The Preamble represents the philosophy of the Indian Constitution. It declares India to be:</p>
+                        <ul class="checklist">
+                            <li>Sovereign – Independent of any external authority</li>
+                            <li>Socialist – Economic justice and equal wealth distribution</li>
+                            <li>Secular – No official religion; equal treatment of all religions</li>
+                            <li>Democratic – Government elected by the people</li>
+                            <li>Republic – Head of the state is elected (President, not a monarch)</li>
+                            <li>Justice – Social, economic, and political</li>
+                            <li>Liberty – Freedom of thought, expression, belief</li>
+                            <li>Equality – Equal status and opportunity</li>
+                            <li>Fraternity – Ensuring unity and dignity of individuals</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="fundamental-rights" class="card slide-up">
+                    <div class="card-header">
+                        <h2>2️⃣ Fundamental Rights (Part III, Articles 12-35)</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="legal-reference">
+                            <h3>🔹 Right to Equality (Articles 14-18)</h3>
+                            <br>
+                            <ul>
+                                <li><strong>Article 14:</strong> Equality before the law</li>
+                                <li><strong>Article 15:</strong> No discrimination based on religion, caste, sex, etc.</li>
+                                <li><strong>Article 16:</strong> Equal opportunities in public employment</li>
+                                <li><strong>Article 17:</strong> Abolition of untouchability</li>
+                                <li><strong>Article 18:</strong> Abolition of titles</li>
+                            </ul>
+                        </div>
+                        <div class="legal-reference">
+                            <h3>🔹 Right to Freedom (Articles 19-22)</h3>
+                            <br>
+                            <ul>
+                                <li><strong>Article 19:</strong> Freedom of speech, expression, movement, profession, etc.</li>
+                                <li><strong>Article 20:</strong> Protection against double jeopardy and self-incrimination</li>
+                                <li><strong>Article 21:</strong> Right to life and personal liberty</li>
+                                <li><strong>Article 21A:</strong>Right to education (free & compulsory for children 6-14 years)</li>
+                                <li><strong>Article 22:</strong> Protection against arrest and detention</li>
+                            </ul>   
+                        </div>
+                        <div class="legal-reference">
+                            <h3>🔹 Right against Exploitation (Articles 23-24)</h3>
+                            <br>
+                            <ul>
+                                <li><strong>Article 23:</strong> Prohibition of human trafficking and forced labor</li>
+                                <li><strong>Article 24:</strong> Prohibition of child labor in hazardous industries</li>            
+                            </ul>
+                        </div>  
+                        <div class="legal-reference">
+                            <h3>🔹 Right to Freedom of Religion (Articles 25-28)</h3>
+                            <br>
+                            <ul>
+                                <li><strong>Article 25:</strong> Freedom of conscience and free profession, practice, and propagation of religion</li>
+                                <li><strong>Article 26:</strong> Freedom to manage religious affairs</li>
+                                <li><strong>Article 27:</strong> Freedom from payment of taxes for promotion of any religion</li>
+                                <li><strong>Article 28:</strong> Freedom from attending religious instruction in educational institutions</li>
+                            </ul>
+                        </div>
+                        <div class="legal-reference">
+                            <h3>🔹 Cultural and Educational Rights (Articles 29-30)</h3>
+                            <br>
+                            <ul>
+                                <li><strong>Article 29:</strong> Protection of language, script, and culture of minorities</li>
+                                <li><strong>Article 30:</strong> Right of minorities to establish and administer educational institutions</li>
+                            </ul>   
+                        </div>
+                        <div class="legal-reference">
+                            <h3>🔹 Right to Constitutional Remedies (Article 32)</h3>
+                            <br>
+                            <li>Guarantees the right to move the Supreme Court for the enforcement of fundamental rights</li>
+                            <li>Power to issue writs (Habeas Corpus, Mandamus, Prohibition, Certiorari, Quo Warranto)</li>
+                        </div>
+                        <div class="legal-reference">
+                            <h3>🔹 Right to Privacy</h3>
+                            <br>
+                            <p>Recognized as a fundamental right under Article 21 in the <a href="#" class="tooltip">Puttaswamy Case (2017)<span class="tooltip-text">Justice K.S. Puttaswamy (Retd.) vs. Union of India</span></a>.</p>
+                        </div>
+                        <!-- Add more rights sections here -->
+                    </div>
+                </section>
+                <section id="dpsp" class="card slide-up">
+                    <div class="card-header">
+                        <h2>3️⃣Directive Principles of State Policy (DPSP) (Part IV, Articles 36-51)</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>DPSPs are guidelines for the government to create policies ensuring social and economic justice. These are non-justiciable, meaning they cannot be enforced by courts.</p>
+                        <div class="legal-reference">
+                            <h3>Categories of DPSPs:</h3>
+                            <br>
+                        <ul class="checklist">
+                            <li><strong>Socialistic Principles  –</strong> Equal pay for equal work, right to education, health, labor welfare</li>
+                            <li><strong>Gandhian Principles  –</strong> Promotion of cottage industries, organization of village panchayats</li>
+                            <li><strong>Liberal-Intellectual Principles  –</strong> rotection of the environment, promotion of international peace</li>
+                        </ul>
+                    </div>
+                </section>
+
+                 <!-- Continue with sections for DPSP, Fundamental Duties, etc. -->
+                <section id="fundamental-duties" class="card slide-up">
+                    <div class="card-header">
+                        <h2>4️⃣ Fundamental Duties (Part IV-A, Article 51A)</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>Added to the Constitution by the 42nd Amendment in 1976, Fundamental Duties are a moral and civic obligation of citizens to uphold the unity and integrity of the nation.</p>
+                        <div class="legal-reference">
+                            <h3>🔹 Key Duties:</h3>
+                            <br>
+                            <ul class="checklist">
+                                <li>Respect the Constitution, National Flag, and National Anthem</li>
+                                <li>Protect the sovereignty, unity, and integrity of India</li>
+                                <li>Defend the country and render national service when called upon</li>
+                                <li>Promote harmony and the spirit of common brotherhood</li>
+                                <li>Preserve the rich heritage and culture of India</li>
+                                <li>Protect natural environment and wildlife</li>
+                                <li>Develop scientific temper, humanism, and the spirit of inquiry</li>
+                                <li>Safeguard public property and abjure violence</li>
+                                <li>Strive for excellence in all spheres of individual and collective activity</li>
+                                <li>Value and preserve the rich heritage of composite culture</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section id="amendments" class="card slide-up">
+                <div class="card-header">
+                    <h2>5️⃣ Constitutional Amendments</h2>    
+                </div>  
+                <div class="card-body">
+                    <p>The Constitution can be amended by Parliament through a special majority. Key amendments include:</p>
+                    <ul class="checklist">
+                        <li><strong>42nd Amendment (1976):</strong> Added Fundamental Duties and shifted the focus from rights to duties</li>
+                        <li><strong>44th Amendment (1978):</strong> Limited the power of the President to declare Emergency</li>
+                        <li><strong>73rd and 74th Amendments (1992):</strong> Introduced Panchayati Raj and Urban Local Bodies</li>
+                        <li><strong>86th Amendment (2002):</strong> Made education a fundamental right for children aged 6-14 years</li>
+                        <li><strong>101st Amendment (2016):</strong> Introduced GST (Goods and Services Tax)</li>
+                    </ul>   
+                </div>
+            </section>
+            <section id="government-structure" class="fade-in">
+                <div class="card slide-up">
+                    <div class="card-header">
+                        <h2 class="card-title">5. The Structure of Government</h2>
+                        <i class="fas fa-landmark card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <!-- Legislature Section -->
+                        <div class="sub-section">
+                            <h3 class="sub-section-title">
+                                <i class="fas fa-scroll" style="color: var(--secondary); margin-right: 10px;"></i>
+                                (A) Legislature – Lawmaking Body
+                            </h3>
+                            <div class="feature-list">
+                                <div class="feature-item">
+                                    <i class="fas fa-building feature-icon"></i>
+                                    <div>
+                                        <h4>Parliament (Bicameral Legislature)</h4>
+                                        <ul class="custom-list">
+                                            <li><i class="fas fa-users"></i> Lok Sabha (Lower House)
+                                                <ul>
+                                                    <li>543 Members</li>
+                                                    <li>Elected every 5 years</li>
+                                                    <li>People's Representation</li>
+                                                </ul>
+                                            </li>
+                                            <li><i class="fas fa-university"></i> Rajya Sabha (Upper House)
+                                                <ul>
+                                                    <li>245 Members</li>
+                                                    <li>Elected indirectly</li>
+                                                    <li>States' Representation</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-landmark feature-icon"></i>
+                                    <div>
+                                        <h4>State Legislatures</h4>
+                                        <ul class="custom-list">
+                                            <li>Vidhan Sabha (Legislative Assembly)</li>
+                                            <li>Vidhan Parishad (Legislative Council) in some states</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Executive Section -->
+                        <div class="sub-section">
+                            <h3 class="sub-section-title">
+                                <i class="fas fa-chess-king" style="color: var(--secondary); margin-right: 10px;"></i>
+                                (B) Executive – Law Enforcement
+                            </h3>
+                            <div class="feature-list">
+                                <div class="feature-item">
+                                    <i class="fas fa-flag feature-icon"></i>
+                                    <div>
+                                        <h4>President of India</h4>
+                                        <p>Head of State (Article 52-62)</p>
+                                        <p>Supreme Commander of Armed Forces</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-user-tie feature-icon"></i>
+                                    <div>
+                                        <h4>Prime Minister</h4>
+                                        <p>Head of Government</p>
+                                        <p>Leads the Union Executive</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-users-cog feature-icon"></i>
+                                    <div>
+                                        <h4>Council of Ministers</h4>
+                                        <p>Advises the President</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-user-shield feature-icon"></i>
+                                    <div>
+                                        <h4>Governor</h4>
+                                        <p>Article 153-167</p>
+                                        <p>Appointed representative of the President in States</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Judiciary Section -->
+                        <div class="sub-section">
+                            <h3 class="sub-section-title">
+                                <i class="fas fa-gavel" style="color: var(--secondary); margin-right: 10px;"></i>
+                                (C) Judiciary – Guardian of the Constitution
+                            </h3>
+                            <div class="feature-list">
+                                <div class="feature-item">
+                                    <i class="fas fa-balance-scale feature-icon"></i>
+                                    <div>
+                                        <h4>Supreme Court</h4>
+                                        <p>Articles 124-147</p>
+                                        <p>Highest court in India</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-court feature-icon"></i>
+                                    <div>
+                                        <h4>High Courts</h4>
+                                        <p>Articles 214-231</p>
+                                        <p>One in each state or union territory</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-balance-scale-left feature-icon"></i>
+                                    <div>
+                                        <h4>District & Subordinate Courts</h4>
+                                        <p>Local level judiciary</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info-box">
+                                <h4><i class="fas fa-shield-alt"></i> Powers of the Supreme Court</h4>
+                                <ul class="custom-list">
+                                    <li><i class="fas fa-check-circle"></i> Judicial Review – Declaring laws unconstitutional</li>
+                                    <li><i class="fas fa-check-circle"></i> Writ Jurisdiction – Enforcing Fundamental Rights</li>
+                                    <li><i class="fas fa-check-circle"></i> Special Leave Petition – Taking cases from lower courts</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Emergency Provisions Section -->
+                <div class="card slide-up">
+                    <div class="card-header">
+                        <h2 class="card-title">6. Emergency Provisions</h2>
+                        <i class="fas fa-exclamation-triangle card-icon"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-subtitle">Part XVIII, Articles 352-360</p>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <i class="fas fa-flag feature-icon"></i>
+                                <div>
+                                    <h4>National Emergency (Article 352)</h4>
+                                    <ul class="custom-list">
+                                        <li>War</li>
+                                        <li>External aggression</li>
+                                        <li>Internal disturbance</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-map-marked-alt feature-icon"></i>
+                                <div>
+                                    <h4>State Emergency (Article 356)</h4>
+                                    <p>President's Rule in a state</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-chart-line feature-icon"></i>
+                                <div>
+                                    <h4>Financial Emergency (Article 360)</h4>
+                                    <p>Economic crisis</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            </div>
+
+            <section id="federal-structure" class="card slide-up">
+                <div class="card-header">
+                    <h2>6️⃣ Federal Structure of Government</h2>  
+                </div>
+                <div class="card-body">
+                    <p>India follows a federal system with a division of powers between the Union (Centre) and States.</p> 
+                    <br>
+                        <p><strong>Key features include:</strong></p>
+                    <ul class="checklist">
+                        <li>Three-tier government – Union, State, and Local Bodies</li>
+                        <li> Union List, State List, and Concurrent List</li>
+                        <li>Independent judiciary to resolve disputes between Centre and States</li>
+                        <li>Appointment of Governors to represent the President in States</li>
+                    </ul>   
+                </div>
+            </section>
+
+            <section id="constitutional-authorities" class="card slide-up">
+                <div class="card-header">
+                    <h2>7️⃣ Constitutional Authorities</h2>
+                </div>
+                <div class="card-body">
+                    <div class="legal-reference">
+                        <h3>🔹 President of India (Article 52)</h3>
+                        <br>
+                        <p>Head of the state, elected by an Electoral College consisting of elected members of Parliament and State Legislatures.</p>
+                    </div>
+                    <div class="legal-reference">
+                        <h3>🔹 Vice-President of India (Article 63)</h3>
+                        <br>
+                        <p>Ex-officio Chairman of the Rajya Sabha (Council of States).</p>
+                    </div>
+                    <div class="legal-reference">
+                        <h3>🔹 Prime Minister of India (Article 74)</h3>
+                        <br>
+                        <p>Head of the government, appointed by the President and responsible to the Lok Sabha (House of the People).</p>
+                    </div>
+                    <div class="legal-reference">
+                        <h3>🔹 Governor of States (Article 153)</h3>
+                        <br>
+                        <p>Head of the state, appointed by the President to represent the Centre in States.</p>
+                    </div>
+                    <div class="legal-reference">
+                        <h3>🔹 Chief Justice of India (Article 124)</h3>
+                        <br>
+                        <p>Head of the judiciary, appointed by the President and responsible for the administration of justice.</p>
+                    </div>  
+                </div>
+            </section>
+            <section id="landmark-cases" class="card slide-up">
+                    <div class="card-header">
+                        <h2>8️⃣ Landmark Constitutional Cases</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="case-box">
+                            <h3 class="case-title">Kesavananda Bharati Case (1973)</h3>
+                            <p>Established the Basic Structure Doctrine</p>
+                        </div>
+                        <div class="case-box">
+                            <h3 class="case-title">Maneka Gandhi Case (1978)</h3>
+                            <p>Expanded Right to Life & Personal Liberty</p>
+                        </div>
+                        <div class="case-box">
+                            <h3 class="case-title">Minerva Mills Case (1980)</h3>
+                            <p>Strengthened Fundamental Rights over DPSPs</p>
+                        </div>
+                        <div class="case-box">
+                            <h3 class="case-title">SR Bommai Case (1994)</h3>
+                            <p>Limited misuse of President's Rule</p>
+                        </div>
+                        <div class="case-box">
+                            <h3 class="case-title">IR Coelho Case (2007)</h3>
+                            <p>Judicial review over Ninth Schedule laws</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="navigation-dots">
+                <span class="nav-dot active" data-section="preamble"></span>
+                <span class="nav-dot" data-section="fundamental-rights"></span>
+                <span class="nav-dot" data-section="landmark-cases"></span>
+            </div>
+        </main>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">About LegalLearn</h3>
+                <p>LegalLearn is a modern platform dedicated to providing comprehensive legal education resources. Our mission is to make legal knowledge accessible and understandable for everyone.</p>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li class="footer-link"><a href="#home">Home</a></li>
+                    <li class="footer-link"><a href="#categories">Categories</a></li>
+                    <li class="footer-link"><a href="#">FAQs</a></li>
+                    <li class="footer-link"><a href="#">Resources</a></li>
+                    <li class="footer-link"><a href="#">About</a></li>
+                    <li class="footer-link"><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Contact Us</h3>
+                <p>If you have any questions or need further information, feel free to reach out to us.</p>
+                <p>Email: support@legallearn.com</p>
+                <p>Phone: +1 234 567 890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 LegalLearn. All rights reserved.
+        </div>
+    </footer>
+    <script src="assets/js/consitutional-law.js"></script>
+</body>
+</html>

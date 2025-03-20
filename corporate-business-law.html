@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive legal education platform covering corporate law, business regulations, company formation, and commercial transactions.">
+    <meta property="og:title" content="LegalLearn - Corporate & Business Law">
+    <meta property="og:description" content="Learn about Companies Act, SEBI regulations, partnerships, and business laws.">
+    <meta property="og:type" content="website">
+    <title>LegalLearn - Corporate & Business Law</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/corporate-business-law.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+    <button class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+   <!-- Sidebar Navigation -->
+   <aside class="sidebar">
+    <div class="sidebar-header">
+        <div class="logo">
+            <div class="logo-icon"><i class="fas fa-balance-scale"></i></div>
+            <div class="logo-text">Legal<span>Learn</span></div>
+        </div>
+        <div class="sidebar-search">
+            <i class="fas fa-search"></i>
+            <input type="text" id="sidebarSearch" placeholder="Search legal topics...">
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
+    <ul class="nav-menu">
+        <li class="nav-item">
+            <a href="index.html" class="nav-link active">
+                <i class="fas fa-home"></i> Home
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="constitutional-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-balance-scale"></i> Constitutional Law
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="criminal-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-gavel"></i> Criminal Law
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="civil-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-book-reader"></i> Civil Law
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="corporate-business-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-briefcase"></i> Corporate & Business Law
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="intellectual-property-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-copyright"></i> Intellectual Property Law
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="taxation-laws.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-chart-pie"></i> Taxation Laws
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="cyber-it-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-shield-alt"></i> Cyber & IT Laws
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="consumer-protection-laws.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-shopping-cart"></i> Consumer Protection Laws
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="employment-labor-laws.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-building"></i> Employment & Labor Laws
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="enviornmental-laws.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-leaf"></i> Environmental Laws
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="alternative-dispute-resolution.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-handshake"></i> Alternative Dispute Resolution
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="legal-ethics.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-gavel"></i>Legal Ethics
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="international-trade-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-globe"></i>International Trade Law
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="human-rights.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-users"></i>Human Rights
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="faqs.html" class="nav-link">
+                <i class="fas fa-question-circle"></i> FAQs
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="resources.html" class="nav-link">
+                <i class="fas fa-book"></i> Resources
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="about.html" class="nav-link">
+                <i class="fas fa-info-circle"></i> About
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="contact-us.html" class="nav-link">
+                <i class="fas fa-envelope"></i> Contact
+            </a>
+        </li>
+    </ul>
+</aside>
+
+    <div class="container">
+        <main class="main-content">
+            <h1 class="section-title">Corporate & Business Law</h1>
+            <p class="intro-text">Corporate and business laws regulate the formation, governance, operation, and dissolution of companies, partnerships, and businesses. These laws ensure legal compliance, investor protection, fair competition, and financial accountability.</p>
+
+            <div class="quick-links">
+                <h2>Quick Navigation</h2>
+                <div class="link-grid">
+                    <a href="#companies-act" class="quick-link">
+                        <i class="fas fa-building"></i> Companies Act
+                    </a>
+                    <a href="#contract-law" class="quick-link">
+                        <i class="fas fa-file-signature"></i> Contract Law
+                    </a>
+                    <a href="#partnership-laws" class="quick-link">
+                        <i class="fas fa-handshake"></i> Partnership Laws
+                    </a>
+                    <a href="#securities-law" class="quick-link">
+                        <i class="fas fa-chart-line"></i> Securities Law
+                    </a>
+                    <a href="#insolvency-law" class="quick-link">
+                        <i class="fas fa-coins"></i> Insolvency Law
+                    </a>
+                    <a href="#foreign-exchange" class="quick-link">
+                        <i class="fas fa-globe"></i> Foreign Exchange
+                    </a>
+                </div>
+            </div>
+
+            <section id="companies-act" class="law-category">
+                <div class="card-header">
+                    <h2>Companies Act, 2013</h2>
+                </div>
+                <div class="card-body">
+                    <p>The Companies Act, 2013 is the primary legislation governing companies in India. It replaced the Companies Act, 1956 to meet the changing business environment and provide better corporate governance.</p>
+                    
+                    <h3>Key Features</h3>
+                    <ul class="checklist">
+                        <li>Incorporation of companies and matters incidental thereto</li>
+                        <li>Corporate Social Responsibility (CSR) provisions</li>
+                        <li>One Person Company concept introduction</li>
+                        <li>Enhanced disclosure norms and transparency</li>
+                        <li>Stricter corporate governance norms</li>
+                        <li>Protection of minority shareholders</li>
+                    </ul>
+
+                    <h3>Types of Companies</h3>
+                    <div class="law-type-card">
+                        <h4>Private Limited Company</h4>
+                        <ul class="checklist">
+                            <li>Minimum 2 directors</li>
+                            <li>Maximum 200 shareholders</li>
+                            <li>Restricted share transfer</li>
+                        </ul>
+                    </div>
+                    <div class="law-type-card">
+                        <h4>Public Limited Company</h4>
+                        <ul class="checklist">
+                            <li>Minimum 3 directors</li>
+                            <li>No maximum shareholder limit</li>
+                            <li>Free share transferability</li>
+                        </ul>
+                    </div>
+                    <div class="law-type-card">
+                        <h4>One Person Company</h4>
+                        <ul class="checklist">
+                            <li>Single director and member</li>
+                            <li>Limited liability protection</li>
+                            <li>Simplified compliance</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contract-law" class="law-category">
+                <div class="card-header">
+                    <h2>Contract Law</h2>
+                </div>
+                <div class="card-body">
+                    <p>The Indian Contract Act, 1872 governs business contracts in India. It defines the way in which contracts are made and executed, and provides remedies for breach of contract.</p>
+
+                    <h3>Essential Elements of a Valid Contract</h3>
+                    <ul class="checklist">
+                        <li>Offer and Acceptance</li>
+                        <li>Consideration</li>
+                        <li>Capacity to Contract</li>
+                        <li>Free Consent</li>
+                        <li>Lawful Object</li>
+                        <li>Not Expressly Void</li>
+                    </ul>
+
+                    <h3>Types of Contracts</h3>
+                    <div class="law-type-card">
+                        <h4>Express Contracts</h4>
+                        <p>Terms are explicitly stated in words</p>
+                    </div>
+                    <div class="law-type-card">
+                        <h4>Implied Contracts</h4>
+                        <p>Inferred from conduct of parties</p>
+                    </div>
+                    <div class="law-type-card">
+                        <h4>Quasi Contracts</h4>
+                        <p>Created by law to prevent unjust enrichment</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="partnership-laws" class="law-category">
+                <div class="card-header">
+                    <h2>Partnership Laws</h2>
+                </div>
+                <div class="card-body">
+                    <p>Partnership laws in India are governed by two main acts: the Indian Partnership Act, 1932, and the Limited Liability Partnership Act, 2008. These laws provide the framework for business partnerships.</p>
+
+                    <div class="law-type-card">
+                        <h4>Indian Partnership Act, 1932</h4>
+                        <ul class="checklist">
+                            <li>Defines partnership and partner relationships</li>
+                            <li>Rights and duties of partners</li>
+                            <li>Partnership property and accounts</li>
+                            <li>Dissolution procedures</li>
+                            <li>Registration process (optional)</li>
+                        </ul>
+                    </div>
+
+                    <div class="law-type-card">
+                        <h4>Limited Liability Partnership (LLP) Act, 2008</h4>
+                        <ul class="checklist">
+                            <li>Separate legal entity status</li>
+                            <li>Limited liability protection for partners</li>
+                            <li>Flexible internal management structure</li>
+                            <li>Mandatory registration with ROC</li>
+                            <li>Annual compliance requirements</li>
+                        </ul>
+                    </div>
+
+                    <h3>Key Features of Partnerships</h3>
+                    <ul class="checklist">
+                        <li>Mutual agency relationship between partners</li>
+                        <li>Profit and loss sharing</li>
+                        <li>Joint decision-making authority</li>
+                        <li>Fiduciary relationship among partners</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="securities-law" class="law-category">
+                <div class="card-header">
+                    <h2>Securities Law</h2>
+                </div>
+                <div class="card-body">
+                    <p>Securities laws regulate the capital markets, protect investor interests, and ensure fair trading practices. The Securities and Exchange Board of India (SEBI) is the primary regulatory authority.</p>
+
+                    <h3>Major Securities Laws</h3>
+                    <div class="law-type-card">
+                        <h4>SEBI Act, 1992</h4>
+                        <ul class="checklist">
+                            <li>Establishment and powers of SEBI</li>
+                            <li>Registration of market intermediaries</li>
+                            <li>Investor protection measures</li>
+                            <li>Penalties for violations</li>
+                        </ul>
+                    </div>
+
+                    <div class="law-type-card">
+                        <h4>Securities Contracts (Regulation) Act, 1956</h4>
+                        <ul class="checklist">
+                            <li>Recognition of stock exchanges</li>
+                            <li>Regulation of securities trading</li>
+                            <li>Listing requirements</li>
+                            <li>Prevention of unfair practices</li>
+                        </ul>
+                    </div>
+
+                    <h3>Key Market Regulations</h3>
+                    <ul class="checklist">
+                        <li>Insider Trading Regulations</li>
+                        <li>Takeover Code</li>
+                        <li>Listing Obligations and Disclosure Requirements</li>
+                        <li>Mutual Fund Regulations</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="insolvency-law" class="law-category">
+                <div class="card-header">
+                    <h2>Insolvency & Bankruptcy Law</h2>
+                </div>
+                <div class="card-body">
+                    <p>The Insolvency and Bankruptcy Code (IBC), 2016, provides a time-bound process for resolving insolvency in companies and among individuals. It aims to promote entrepreneurship and credit availability.</p>
+
+                    <h3>Key Features of IBC</h3>
+                    <ul class="checklist">
+                        <li>Time-bound resolution within 330 days</li>
+                        <li>Single window clearance process</li>
+                        <li>Creditor-in-control regime</li>
+                        <li>Information utilities for financial data</li>
+                    </ul>
+
+                    <div class="law-type-card">
+                        <h4>Resolution Process</h4>
+                        <ul class="checklist">
+                            <li>Appointment of resolution professional</li>
+                            <li>Formation of creditors committee</li>
+                            <li>Submission and approval of resolution plan</li>
+                            <li>Liquidation if resolution fails</li>
+                        </ul>
+                    </div>
+
+                    <div class="law-type-card">
+                        <h4>Institutional Framework</h4>
+                        <ul class="checklist">
+                            <li>National Company Law Tribunal (NCLT)</li>
+                            <li>Insolvency and Bankruptcy Board of India (IBBI)</li>
+                            <li>Insolvency Professionals</li>
+                            <li>Information Utilities</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="foreign-exchange" class="law-category">
+                <div class="card-header">
+                    <h2>Foreign Exchange Law</h2>
+                </div>
+                <div class="card-body">
+                    <p>The Foreign Exchange Management Act (FEMA), 1999, regulates foreign exchange transactions and foreign investment in India. It is administered by the Reserve Bank of India (RBI).</p>
+
+                    <h3>Key Aspects of FEMA</h3>
+                    <ul class="checklist">
+                        <li>Current account transactions</li>
+                        <li>Capital account transactions</li>
+                        <li>Foreign investment regulations</li>
+                        <li>External commercial borrowings</li>
+                    </ul>
+
+                    <div class="law-type-card">
+                        <h4>Foreign Direct Investment (FDI)</h4>
+                        <ul class="checklist">
+                            <li>Automatic route - up to 100% in most sectors</li>
+                            <li>Government route - prior approval required</li>
+                            <li>Sector-specific caps and conditions</li>
+                            <li>Reporting requirements</li>
+                        </ul>
+                    </div>
+
+                    <div class="law-type-card">
+                        <h4>Overseas Investment</h4>
+                        <ul class="checklist">
+                            <li>Direct investment abroad by Indian entities</li>
+                            <li>Overseas portfolio investment</li>
+                            <li>Investment limits and guidelines</li>
+                            <li>Repatriation of profits</li>
+                        </ul>
+                    </div>
+
+                    <h3>Compliance Requirements</h3>
+                    <ul class="checklist">
+                        <li>RBI reporting and filings</li>
+                        <li>Annual performance reports</li>
+                        <li>Foreign currency accounts management</li>
+                        <li>Documentation and record keeping</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">About LegalLearn</h3>
+                <p>Comprehensive legal education platform making law accessible and understandable for everyone.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li class="footer-link"><a href="constitutional-law.html">Constitutional Law</a></li>
+                    <li class="footer-link"><a href="criminal-law.html">Criminal Law</a></li>
+                    <li class="footer-link"><a href="civil-law.html">Civil Law</a></li>
+                    <li class="footer-link"><a href="corporate-business-law.html">Corporate Law</a></li>
+                    <li class="footer-link"><a href="resources.html">Resources</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Contact Info</h3>
+                <ul class="footer-links">
+                    <li class="footer-link">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@legallearn.com">info@legallearn.com</a>
+                    </li>
+                    <li class="footer-link">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+1234567890">+1 (234) 567-890</a>
+                    </li>
+                    <li class="footer-link">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>New Delhi, India</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Newsletter</h3>
+                <p>Subscribe to our newsletter for legal updates and insights.</p>
+                <form class="subscribe-form">
+                    <input type="email" class="subscribe-input" placeholder="Enter your email">
+                    <button type="submit" class="subscribe-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> LegalLearn. All rights reserved.</p>
+        </div>
+
+        <button class="back-to-top" id="backToTop">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+    <script src="assets/js/corporate-business-law.js"></script>
+       
+</body>
+</html>

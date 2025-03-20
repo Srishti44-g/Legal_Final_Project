@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | LegalEdu Pro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        :root {
+            --primary: #0A2463;
+            --secondary: #D4AF37;
+            --light: #F8F8F8;
+            --gray: #6C757D;
+            --dark: #212529;
+            --success: #28a745;
+            --serif: 'Georgia', serif;
+            --sans: 'Helvetica', 'Arial', sans-serif;
+        }
+
+        /* Light Mode (Default) */
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            font-family: var(--sans);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s ease;
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            background-color: #1a1a2e;
+            color: #e6e6e6;
+        }
+
+        body.dark-mode .card,
+        body.dark-mode .accordion-item,
+        body.dark-mode .form-control,
+        body.dark-mode .form-select {
+            background-color: #16213e;
+            color: #e6e6e6;
+            border-color: #0f3460;
+        }
+
+        body.dark-mode .card-header,
+        body.dark-mode .accordion-button:not(.collapsed) {
+            background-color: #0f3460;
+            color: #e6e6e6;
+        }
+
+        body.dark-mode .navbar {
+            background-color: #0f3460 !important;
+        }
+
+        body.dark-mode .btn-outline-primary {
+            color: var(--secondary);
+            border-color: var(--secondary);
+        }
+
+        body.dark-mode .btn-primary {
+            background-color: #0f3460;
+            border-color: #0f3460;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--serif);
+            color: var(--primary);
+        }
+
+        body.dark-mode h1, 
+        body.dark-mode h2, 
+        body.dark-mode h3, 
+        body.dark-mode h4, 
+        body.dark-mode h5, 
+        body.dark-mode h6 {
+            color: var(--secondary);
+        }
+
+        .navbar {
+            background-color: var(--primary) !important;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
+        }
+
+        .navbar-brand {
+            font-family: var(--serif);
+            font-weight: bold;
+            color: white !important;
+        }
+
+        .nav-link {
+            color: white !important;
+            margin: 0 10px;
+            font-weight: 500;
+        }
+
+        #theme-toggle {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(10, 36, 99, 0.8), rgba(10, 36, 99, 0.9)), url('/api/placeholder/1200/400');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-family: var(--serif);
+            font-weight: bold;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .card {
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            background-color: var(--primary);
+            color: white;
+            font-family: var(--serif);
+            border-radius: 8px 8px 0 0 !important;
+            padding: 1rem 1.5rem;
+        }
+
+        .form-control, .form-select {
+            border-radius: 4px;
+            padding: 0.8rem 1rem;
+            border: 1px solid #ced4da;
+            margin-bottom: 1.2rem;
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.2rem rgba(10, 36, 99, 0.25);
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            font-weight: 600;
+            padding: 0.7rem 2rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #081b4e;
+            border-color: #081b4e;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-primary {
+            color: var(--primary);
+            border-color: var(--primary);
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-right: 1rem;
+            width: 40px;
+            text-align: center;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-text {
+            flex: 1;
+        }
+
+        .contact-text h5 {
+            margin-bottom: 0.3rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        body.dark-mode .contact-text h5 {
+            color: var(--secondary);
+        }
+
+        .contact-action {
+            margin-left: 1rem;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: rgba(10, 36, 99, 0.25);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+
+        .social-links a {
+            background-color: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        .office-hours {
+            background-color: var(--light);
+            border-left: 4px solid var(--secondary);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 0 4px 4px 0;
+        }
+
+        body.dark-mode .office-hours {
+            background-color: #16213e;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .office-hours h5 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        body.dark-mode .office-hours h5 {
+            color: var(--secondary);
+        }
+
+        .response-time {
+            color: var(--success);
+            font-weight: 600;
+        }
+
+        .map-container {
+            height: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 1rem;
+        }
+
+        .success-message {
+            display: none;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-top: 1rem;
+        }
+
+        body.dark-mode .success-message {
+            background-color: #16213e;
+            color: #a3e635;
+        }
+
+        .error-feedback {
+            color: #dc3545;
+            font-size: 0.875rem;
+            margin-top: -1rem;
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer-copyright {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 3rem 1rem;
+            }
+            
+            .contact-action {
+                margin-left: 0;
+                margin-top: 0.5rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .contact-icon {
+                margin-bottom: 0.5rem;
+            }
+        }
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">LegalEdu Pro</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Research</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button id="theme-toggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">Get in Touch With Our Team</h1>
+            <p class="hero-text">
+                Whether you have questions about our courses, need assistance with your legal research, 
+                require technical support, or wish to explore partnership opportunities, 
+                our team of legal education experts is ready to assist you with prompt and professional guidance.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- Contact Form -->
+            <div class="col-lg-7 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="mb-0">Send Us a Message</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" id="fullName" required>
+                                <div class="error-feedback" id="nameError">Please enter your full name</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" id="email" required>
+                                <div class="error-feedback" id="emailError">Please enter a valid email address</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject *</label>
+                                <select class="form-select" id="subject" required>
+                                    <option value="" selected disabled>Please select a subject</option>
+                                    <option value="General Inquiry">General Inquiry</option>
+                                    <option value="Course Support">Course Support</option>
+                                    <option value="Legal Research Assistance">Legal Research Assistance</option>
+                                    <option value="Technical Support">Technical Support</option>
+                                    <option value="Collaboration">Collaboration & Partnership</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <div class="error-feedback" id="subjectError">Please select a subject</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                                <div class="error-feedback" id="messageError">Please enter your message</div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit Message</button>
+                            <div class="success-message mt-3" id="successMessage">
+                                <i class="fas fa-check-circle me-2"></i>
+                                Your message has been sent successfully. Our team will respond within 24-48 hours during business days.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="col-lg-5">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h3 class="mb-0">Contact Information</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="contact-info">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h5>Email Address</h5>
+                                <p>support@legaledu.pro</p>
+                            </div>
+                            <div class="contact-action">
+                                <button class="btn btn-outline-primary btn-sm" id="copyEmail">
+                                    <i class="fas fa-copy me-1"></i> Copy
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="contact-info">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h5>Phone Support</h5>
+                                <p>+1 (800) 555-0123</p>
+                            </div>
+                            <div class="contact-action">
+                                <a href="tel:+18005550123" class="btn btn-outline-primary btn-sm">
+                                    <i class="fas fa-phone-alt me-1"></i> Call
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-info">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h5>Office Address</h5>
+                                <p>123 Legal Avenue, Suite 500<br>Boston, MA 02110</p>
+                            </div>
+                        </div>
+
+                        <div class="map-container">
+                            <!-- Placeholder for Google Maps -->
+                            <img src="/api/placeholder/600/300" alt="Map Location" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Support Hours & Response Time -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="mb-0">Support Hours</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="office-hours">
+                            <h5>North America (EST)</h5>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                        </div>
+                        <div class="office-hours">
+                            <h5>Europe (CET)</h5>
+                            <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                        </div>
+                        <div class="office-hours">
+                            <h5>Asia Pacific (AEST)</h5>
+                            <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                        </div>
+
+                        <h4 class="mt-4 mb-3">Response Times</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                General Inquiries
+                                <span class="response-time">24-48 hours</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Course Support
+                                <span class="response-time">24 hours</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Technical Issues
+                                <span class="response-time">12-24 hours</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Legal Research Assistance
+                                <span class="response-time">48-72 hours</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQs Section -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                How can I access course materials after enrollment?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                After enrollment, you will receive access credentials to our secure learning platform within 24 hours. All course materials, including lecture recordings, case studies, and supplementary resources, will be available through your personalized dashboard. You can access these materials anytime during the course duration and for six months after completion.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                What are the accreditation details for your legal courses?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Our courses are accredited by the American Bar Association (ABA) and the Continuing Legal Education (CLE) boards across all 50 states. Each course listing includes specific CLE credit information. For international recognition, we maintain partnerships with legal education authorities in the UK, Canada, Australia, and several EU countries. Detailed accreditation documentation is available upon request.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                How can I request specialized legal research assistance?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                For specialized legal research assistance, you can submit a detailed request through our contact form by selecting "Legal Research Assistance" in the subject dropdown. Please provide specific information about your research area, key questions, jurisdictional requirements, and any deadlines. Our academic team will evaluate your request and connect you with a subject matter expert within 48-72 hours. For complex research projects, we may suggest scheduling a consultation call to better understand your needs.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                What partnership opportunities are available for law firms and legal institutions?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We offer several partnership models for law firms, academic institutions, and legal organizations. These include co-branded continuing education programs, custom training solutions for firm associates, guest lecturer exchanges, research collaborations, and content licensing arrangements. For enterprise-level access to our platform, we provide institutional subscriptions with volume-based pricing. Select "Collaboration & Partnership" in the contact form to initiate a discussion with our partnerships team.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                How can I get technical support for platform access issues?
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                For immediate technical support, select "Technical Support" in our contact form and provide detailed information about the issue you're experiencing, including any error messages, the device and browser you're using, and steps to reproduce the problem. Our technical team aims to respond within 12-24 hours. For urgent matters during business hours, you can also use our live chat feature or call our technical support line directly at +1 (800) 555-0199.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social & Professional Networks -->
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <h3>Connect With Us</h3>
+                <p>Follow us for the latest legal updates, educational resources, and professional discussions</p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h4>LegalEdu Pro</h4>
+                    <p>Advancing legal education through expert-led courses, comprehensive research resources, and professional development opportunities.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Courses Catalog</a></li>
+                        <li><a href="#" class="text-white">Research Database</a></li>
+                        <li><a href="#" class="text-white">Faculty & Experts</a></li>
+                        <li><a href="#" class="text-white">Legal Updates</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h4>Legal</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-white">Terms of Service</a></li>
+                        <li><a href="#" class="text-white">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 LegalEdu Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = themeToggle.querySelector('i');
+        
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        });
+
+        // Copy Email Functionality
+        const copyEmailBtn = document.getElementById('copyEmail');
+        copyEmailBtn.addEventListener('click', () => {
+            const email = 'support@legaledu.pro';
+            navigator.clipboard.writeText(email).then(() => {
+                const originalText = copyEmailBtn.innerHTML;
+                copyEmailBtn.innerHTML = '<i class="fas fa-check me-1"></i> Copied!';
+                setTimeout(() => {
+                    copyEmailBtn.innerHTML = originalText;
+                }, 2000);
+            });
+        });
+
+        // Form Validation
+        const contactForm = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let isValid = true;
+            
+            // Reset error messages
+            document.querySelectorAll('.error-feedback').forEach(el => {
+                el.style.display = 'none';
+            });
+            
+            // Validate name
+            const name = document.getElementById('fullName');
+            if (!name.value.trim()) {
+                document.getElementById('nameError').style.display = 'block';
+                isValid = false;
+            }
+            
+            // Validate email
+            const email = document.getElementById('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email.value.trim() || !emailRegex.test(email.value)) {
+                document.getElementById('emailError').style.display = 'block';
+                isValid = false;
+            }
+            
+            // Validate subject
+            const subject = document.getElementById('subject');
+            if (!subject.value) {
+                document.getElementById('subjectError').style.display = 'block';
+                isValid = false;
+            }
+            
+            // Validate message
+            const message = document.getElementById('message');
+            if (!message.value.trim()) {
+                document.getElementById('messageError').style.display = 'block';
+                isValid = false;
+            }
+            
+            if (isValid) {
+                // Form is valid - would normally submit via AJAX
+                contactForm.reset();
+                successMessage.style.display = 'block';
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 5000);
+            }
+        });
+    </script>
+</body>
+</html>

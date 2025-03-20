@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about International Trade Law - comprehensive guide to global trade regulations, treaties, and principles.">
+    <meta property="og:title" content="International Trade Law - LegalLearn">
+    <meta property="og:description" content="Detailed guide to international trade law, including WTO regulations, trade agreements, and dispute resolution.">
+    <meta property="og:type" content="website">
+    <title>International Trade Law - LegalLearn</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/international-trade-law.css">
+
+</head>
+<body>
+    <button class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <div class="logo-icon"><i class="fas fa-balance-scale"></i></div>
+                <div class="logo-text">Legal<span>Learn</span></div>
+            </div>
+            <div class="sidebar-search">
+                <i class="fas fa-search"></i>
+                <input type="text" id="sidebarSearch" placeholder="Search legal topics...">
+                <div class="search-results" id="searchResults"></div>
+            </div>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i> Home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="constitutional-law.html" class="nav-link dropdown-toggle">
+                    <i class="fas fa-balance-scale"></i> Constitutional Law
+                    <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="criminal-law.html" class="nav-link dropdown-toggle">
+                    <i class="fas fa-gavel"></i> Criminal Law
+                    <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="civil-law.html" class="nav-link dropdown-toggle">
+                    <i class="fas fa-book-reader"></i> Civil Law
+                    <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="corporate-business-law.html" class="nav-link dropdown-toggle">
+                    <i class="fas fa-briefcase"></i> Corporate & Business Law
+                    <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="intellectual-property-law.html" class="nav-link dropdown-toggle">
+                    <i class="fas fa-copyright"></i> Intellectual Property Law
+                    <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="taxation-laws.html" class="nav-link dropdown-toggle">
+                    <i class="fas fa-chart-pie"></i> Taxation Laws
+                    <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="cyber-it-law.html" class="nav-link dropdown-toggle">
+                    <i class="fas fa-shield-alt"></i> Cyber & IT Laws
+                    <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="consumer-protection-laws.html" class="nav-link dropdown-toggle">
+                    <i class="fas fa-shopping-cart"></i> Consumer Protection Laws
+                    <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="employment-labor-laws.html" class="nav-link dropdown-toggle">
+                    <i class="fas fa-building"></i> Employment & Labor Laws
+                    <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="enviornmental-laws.html" class="nav-link dropdown-toggle">
+                    <i class="fas fa-leaf"></i> Environmental Laws
+                    <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="human-rights.html" class="nav-link dropdown-toggle">
+                    <i class="fas fa-users"></i> Human Rights
+                    <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="international-trade-law.html" class="nav-link active">
+                    <i class="fas fa-globe"></i> International Trade Law
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="alternative-dispute-resolution.html" class="nav-link dropdown-toggle">
+                    <i class="fas fa-handshake"></i> Alternative Dispute Resolution
+                    <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="legal-ethics.html" class="nav-link dropdown-toggle">
+                    <i class="fas fa-gavel"></i> Legal Ethics
+                    <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="faqs.html" class="nav-link">
+                    <i class="fas fa-question-circle"></i> FAQs
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="resources.html" class="nav-link">
+                    <i class="fas fa-book"></i> Resources
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="about.html" class="nav-link">
+                    <i class="fas fa-info-circle"></i> About
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="contact-us.html" class="nav-link">
+                    <i class="fas fa-envelope"></i> Contact
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <main class="main-content">
+            <section id="international-trade-law" class="fade-in">
+                <h1 class="section-title">International Trade Law</h1>
+                <p class="lead">International trade law is the set of rules and customs governing trade between countries. It includes multilateral and bilateral trade agreements, international conventions, and domestic regulations affecting international trade.</p>
+                
+                <div class="card slide-up">
+                    <div class="card-header">
+                        <h2 class="card-title">1. Key International Trade Organizations</h2>
+                        <div class="card-icon"><i class="fas fa-building"></i></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="org-grid">
+                            <div class="org-item">
+                                <i class="fas fa-globe-americas"></i>
+                                <h3>World Trade Organization (WTO)</h3>
+                                <p>Global international organization dealing with the rules of trade between nations. Formed in 1995, it replaced the General Agreement on Tariffs and Trade (GATT) and provides a framework for negotiating trade agreements.</p>
+                            </div>
+                            <div class="org-item">
+                                <i class="fas fa-landmark"></i>
+                                <h3>World Bank</h3>
+                                <p>International financial institution providing loans and grants to developing countries. Works closely with the IMF to provide financial assistance and promote international economic cooperation.</p>
+                            </div>
+                            <div class="org-item">
+                                <i class="fas fa-coins"></i>
+                                <h3>International Monetary Fund (IMF)</h3>
+                                <p>Organization working to foster global monetary cooperation and financial stability. Monitors global economic trends, provides policy advice, and offers financial assistance to countries in need.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card slide-up">
+                    <div class="card-header">
+                        <h2 class="card-title">2. Major Trade Agreements</h2>
+                        <div class="card-icon"><i class="fas fa-file-signature"></i></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th><i class="fas fa-handshake mr-2"></i> Agreement</th>
+                                        <th><i class="fas fa-flag mr-2"></i> Parties</th>
+                                        <th><i class="fas fa-list-ul mr-2"></i> Key Features</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><i class="fas fa-globe text-primary mr-2"></i> GATT/WTO</td>
+                                        <td>164 member countries</td>
+                                        <td>Multilateral trading system, dispute settlement, trade rules</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fas fa-copyright text-primary mr-2"></i> TRIPS Agreement</td>
+                                        <td>WTO members</td>
+                                        <td>Intellectual property rights protection in international trade</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fas fa-concierge-bell text-primary mr-2"></i> GATS</td>
+                                        <td>WTO members</td>
+                                        <td>Rules for international trade in services</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fas fa-exchange-alt text-primary mr-2"></i> Regional Trade Agreements</td>
+                                        <td>Various regional groups</td>
+                                        <td>Preferential trading arrangements between specific countries</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fas fa-leaf text-primary mr-2"></i> Environmental Agreements</td>
+                                        <td>Various signatories</td>
+                                        <td>Balance between trade and environmental protection</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card slide-up">
+                    <div class="card-header">
+                        <h2 class="card-title">3. Key Areas of International Trade Law</h2>
+                        <div class="card-icon"><i class="fas fa-project-diagram"></i></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="topics-grid">
+                            <div class="topic-card">
+                                <h3>
+                                    <i class="fas fa-file-contract" style="color: var(--secondary); margin-right: 10px;"></i> Trade Contracts
+                                </h3>
+                                <ul class="feature-list">
+                                    <li class="feature-item">
+                                        <div class="feature-icon"><i class="fas fa-file-signature"></i></div>
+                                        <div>International sale contracts</div>
+                                    </li>
+                                    <li class="feature-item">
+                                        <div class="feature-icon"><i class="fas fa-tags"></i></div>
+                                        <div>INCOTERMS</div>
+                                    </li>
+                                    <li class="feature-item">
+                                        <div class="feature-icon"><i class="fas fa-money-check"></i></div>
+                                        <div>Letters of credit</div>
+                                    </li>
+                                    <li class="feature-item">
+                                        <div class="feature-icon"><i class="fas fa-file-invoice"></i></div>
+                                        <div>Bills of lading</div>
+                                    </li>
+                                    <li class="feature-item">
+                                        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                                        <div>Insurance contracts</div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="topic-card">
+                                <h3>
+                                    <i class="fas fa-balance-scale" style="color: var(--secondary); margin-right: 10px;"></i> Dispute Resolution
+                                </h3>
+                                <ul class="feature-list">
+                                    <li class="feature-item">
+                                        <div class="feature-icon"><i class="fas fa-gavel"></i></div>
+                                        <div>WTO dispute settlement</div>
+                                    </li>
+                                    <li class="feature-item">
+                                        <div class="feature-icon"><i class="fas fa-users"></i></div>
+                                        <div>International arbitration</div>
+                                    </li>
+                                    <li class="feature-item">
+                                        <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+                                        <div>Mediation</div>
+                                    </li>
+                                    <li class="feature-item">
+                                        <div class="feature-icon"><i class="fas fa-landmark"></i></div>
+                                        <div>Court proceedings</div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="topic-card">
+                                <h3>
+                                    <i class="fas fa-shield-alt" style="color: var(--secondary); margin-right: 10px;"></i> Trade Remedies
+                                </h3>
+                                <ul class="feature-list">
+                                    <li class="feature-item">
+                                        <div class="feature-icon"><i class="fas fa-ban"></i></div>
+                                        <div>Anti-dumping measures</div>
+                                    </li>
+                                    <li class="feature-item">
+                                        <div class="feature-icon"><i class="fas fa-balance-scale-right"></i></div>
+                                        <div>Countervailing duties</div>
+                                    </li>
+                                    <li class="feature-item">
+                                        <div class="feature-icon"><i class="fas fa-life-ring"></i></div>
+                                        <div>Safeguard measures</div>
+                                    </li>
+                                    <li class="feature-item">
+                                        <div class="feature-icon"><i class="fas fa-hand-paper"></i></div>
+                                        <div>Trade sanctions</div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="topic-card">
+                                <h3>
+                                    <i class="fas fa-truck" style="color: var(--secondary); margin-right: 10px;"></i> Customs and Border Control
+                                </h3>
+                                <ul class="feature-list">
+                                    <li class="feature-item">
+                                        <div class="feature-icon"><i class="fas fa-tag"></i></div>
+                                        <div>Tariff classification</div>
+                                    </li>
+                                    <li class="feature-item">
+                                        <div class="feature-icon"><i class="fas fa-calculator"></i></div>
+                                        <div>Customs valuation</div>
+                                    </li>
+                                    <li class="feature-item">
+                                        <div class="feature-icon"><i class="fas fa-fingerprint"></i></div>
+                                        <div>Rules of origin</div>
+                                    </li>
+                                    <li class="feature-item">
+                                        <div class="feature-icon"><i class="fas fa-clipboard-list"></i></div>
+                                        <div>Import/export procedures</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card slide-up">
+                    <div class="card-header">
+                        <h2 class="card-title">4. International Trade Principles</h2>
+                        <div class="card-icon"><i class="fas fa-scroll"></i></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="principles-list">
+                            <div class="principle">
+                                <h3>
+                                    <i class="fas fa-star" style="color: var(--secondary); margin-right: 10px;"></i> Most-Favored-Nation (MFN)
+                                </h3>
+                                <p>Countries cannot discriminate between trading partners who are WTO members. When a country grants a trading advantage to one member, it must grant it to all WTO members.</p>
+                            </div>
+                            
+                            <div class="principle">
+                                <h3>
+                                    <i class="fas fa-flag" style="color: var(--secondary); margin-right: 10px;"></i> National Treatment
+                                </h3>
+                                <p>Imported goods should be treated no less favorably than domestic goods once they have entered the market. This principle ensures a level playing field for foreign products.</p>
+                            </div>
+                            
+                            <div class="principle">
+                                <h3>
+                                    <i class="fas fa-search" style="color: var(--secondary); margin-right: 10px;"></i> Transparency
+                                </h3>
+                                <p>Trade rules and regulations must be published and accessible. Countries must notify the WTO about changes in their trade policies, ensuring predictability in global trade.</p>
+                            </div>
+                            
+                            <div class="principle">
+                                <h3>
+                                    <i class="fas fa-exchange-alt" style="color: var(--secondary); margin-right: 10px;"></i> Reciprocity
+                                </h3>
+                                <p>Countries should grant similar trade benefits to each other. This principle underpins trade negotiations and encourages countries to lower trade barriers mutually.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card slide-up">
+                    <div class="card-header">
+                        <h2 class="card-title">5. Case Study: WTO Dispute Resolution</h2>
+                        <div class="card-icon"><i class="fas fa-briefcase"></i></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="case-study">
+                            <h3>
+                                <i class="fas fa-plane" style="color: var(--secondary); margin-right: 10px;"></i> US - EU Aircraft Subsidies Dispute
+                            </h3>
+                            <div class="case-details">
+                                <p><i class="fas fa-history" style="color: var(--primary); margin-right: 10px;"></i> <strong>Background:</strong> Long-running dispute over government subsidies to aircraft manufacturers Boeing (US) and Airbus (EU), spanning over 15 years of legal battles.</p>
+                                <p><i class="fas fa-gavel" style="color: var(--primary); margin-right: 10px;"></i> <strong>Process:</strong> Multiple WTO panel and appellate body decisions examining complex subsidy arrangements and their effects on international trade.</p>
+                                <p><i class="fas fa-balance-scale" style="color: var(--primary); margin-right: 10px;"></i> <strong>Outcome:</strong> Authorization of countermeasures by both parties, allowing for billions in tariffs on imported goods.</p>
+                                <p><i class="fas fa-globe" style="color: var(--primary); margin-right: 10px;"></i> <strong>Impact:</strong> Highlighted the complexity of international trade disputes and the importance of WTO dispute settlement mechanisms in managing trade conflicts between major economic powers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">About LegalLearn</h3>
+                    <p>Comprehensive legal education platform making law accessible and understandable for everyone.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="constitutional-law.html">Constitutional Law</a></li>
+                        <li class="footer-link"><a href="criminal-law.html">Criminal Law</a></li>
+                        <li class="footer-link"><a href="civil-law.html">Civil Law</a></li>
+                        <li class="footer-link"><a href="corporate-law.html">Corporate Law</a></li>
+                        <li class="footer-link"><a href="resources.html">Resources</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@legallearn.com">info@legallearn.com</a>
+                        </li>
+                        <li class="footer-link">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+1234567890">+1 (234) 567-890</a>
+                        </li>
+                        <li class="footer-link">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>New Delhi, India</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Newsletter</h3>
+                    <p>Subscribe to our newsletter for legal updates and insights.</p>
+                    <form class="subscribe-form">
+                        <input type="email" class="subscribe-input" placeholder="Enter your email">
+                        <button type="submit" class="subscribe-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> LegalLearn. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="assets/js/navigation.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Back to top button functionality
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>

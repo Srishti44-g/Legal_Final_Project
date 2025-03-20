@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Access comprehensive legal resources, study materials, case law databases, and research tools.">
+    <meta property="og:title" content="LegalLearn - Legal Resources">
+    <meta property="og:description" content="Find legal resources, study materials, case law databases, and research tools all in one place.">
+    <meta property="og:type" content="website">
+    <title>Legal Resources - LegalLearn</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/resources.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+</head>
+<body>
+    <!-- Main Navigation -->
+    <nav>
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <div class="logo-icon"><i class="fas fa-balance-scale"></i></div>
+                    <div class="logo-text">Legal<span>Learn</span></div>
+                </div>
+                <div class="sidebar-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="sidebarSearch" placeholder="Search legal topics...">
+                    <div class="search-results" id="searchResults"></div>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="constitutional-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-balance-scale"></i> Constitutional Law
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="criminal-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-gavel"></i> Criminal Law
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="civil-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-book-reader"></i> Civil Law
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="corporate-business-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-briefcase"></i> Corporate & Business Law
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="intellectual-property-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-copyright"></i> Intellectual Property Law
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="taxation-laws.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-chart-pie"></i> Taxation Laws
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="cyber-it-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-shield-alt"></i> Cyber & IT Laws
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="consumer-protection-laws.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-shopping-cart"></i> Consumer Protection Laws
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="employment-labor-laws.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-building"></i> Employment & Labor Laws
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="enviornmental-laws.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-leaf"></i> Environmental Laws
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="alternative-dispute-resolution.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-handshake"></i> Alternative Dispute Resolution
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="legal-ethics.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-gavel"></i>Legal Ethics
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="international-trade-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-globe"></i>International Trade Law
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="human-rights.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-users"></i>Human Rights
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="faqs.html" class="nav-link">
+                        <i class="fas fa-question-circle"></i> FAQs
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="resources.html" class="nav-link">
+                        <i class="fas fa-book"></i> Resources
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">
+                        <i class="fas fa-info-circle"></i> About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact-us.html" class="nav-link">
+                        <i class="fas fa-envelope"></i> Contact
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <label class="theme-switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="Search resources, templates, and tools...">
+            </div>
+
+            <!----<div class="filter-tags">
+                <span class="filter-tag active">All</span>
+                <span class="filter-tag">Templates</span>
+                <span class="filter-tag">Research Tools</span>
+                <span class="filter-tag">Case Studies</span>
+                <span class="filter-tag">Documents</span>
+                <span class="filter-tag">Guides</span>
+            </div>--->
+
+            <section class="resource-section">
+                <h2 class="category-title">Document Templates</h2>
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <h3>Legal Agreements</h3>
+                            <i class="fas fa-file-contract resource-icon"></i>
+                        </div>
+                        <div class="resource-body">
+                            <ul class="feature-list">
+                                <li>Contract Templates</li>
+                                <li>NDAs</li>
+                                <li>Partnership Agreements</li>
+                                <li>Service Agreements</li>
+                            </ul>
+                        </div>
+                        <div class="resource-footer">
+                            <span>20+ Templates</span>
+                            <a href="#" class="btn btn-primary">Access</a>
+                        </div>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <h3>Court Documents</h3>
+                            <i class="fas fa-gavel resource-icon"></i>
+                        </div>
+                        <div class="resource-body">
+                            <ul class="feature-list">
+                                <li>Pleadings</li>
+                                <li>Motions</li>
+                                <li>Affidavits</li>
+                                <li>Legal Notices</li>
+                            </ul>
+                        </div>
+                        <div class="resource-footer">
+                            <span>15+ Templates</span>
+                            <a href="#" class="btn btn-primary">Access</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="resource-section">
+                <h2 class="category-title">Research Tools</h2>
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <h3>Case Law Database</h3>
+                            <i class="fas fa-database resource-icon"></i>
+                        </div>
+                        <div class="resource-body">
+                            <ul class="feature-list">
+                                <li>Supreme Court Judgments</li>
+                                <li>High Court Decisions</li>
+                                <li>Tribunal Orders</li>
+                                <li>Legal Commentary</li>
+                            </ul>
+                        </div>
+                        <div class="resource-footer">
+                            <span>Updated Daily</span>
+                            <a href="#" class="btn btn-primary">Search</a>
+                        </div>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <h3>Legal Research</h3>
+                            <i class="fas fa-search resource-icon"></i>
+                        </div>
+                        <div class="resource-body">
+                            <ul class="feature-list">
+                                <li>Citation Tools</li>
+                                <li>Legal Journals</li>
+                                <li>Articles</li>
+                                <li>Research Guides</li>
+                            </ul>
+                        </div>
+                        <div class="resource-footer">
+                            <span>Premium Tools</span>
+                            <a href="#" class="btn btn-primary">Explore</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="resource-section">
+                <h2 class="category-title">Practice Tools</h2>
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <h3>Timeline Generator</h3>
+                            <i class="fas fa-clock resource-icon"></i>
+                        </div>
+                        <div class="resource-body">
+                            <ul class="feature-list">
+                                <li>Case Chronology</li>
+                                <li>Deadline Tracking</li>
+                                <li>Limitation Calculator</li>
+                                <li>Event Planning</li>
+                            </ul>
+                        </div>
+                        <div class="resource-footer">
+                            <span>Interactive Tool</span>
+                            <a href="#" class="btn btn-primary">Create</a>
+                        </div>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <h3>Document Analysis</h3>
+                            <i class="fas fa-file-alt resource-icon"></i>
+                        </div>
+                        <div class="resource-body">
+                            <ul class="feature-list">
+                                <li>Contract Review</li>
+                                <li>Clause Library</li>
+                                <li>Risk Analysis</li>
+                                <li>Compliance Check</li>
+                            </ul>
+                        </div>
+                        <div class="resource-footer">
+                            <span>AI-Powered</span>
+                            <a href="#" class="btn btn-primary">Analyze</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">About LegalLearn</h3>
+                <p>Comprehensive legal education platform making law accessible and understandable for everyone.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li class="footer-link"><a href="constitutional-law.html">Constitutional Law</a></li>
+                    <li class="footer-link"><a href="criminal-law.html">Criminal Law</a></li>
+                    <li class="footer-link"><a href="civil-law.html">Civil Law</a></li>
+                    <li class="footer-link"><a href="corporate-business-law.html">Corporate Law</a></li>
+                    <li class="footer-link"><a href="resources.html">Resources</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Contact Info</h3>
+                <ul class="footer-links">
+                    <li class="footer-link">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@legallearn.com">info@legallearn.com</a>
+                    </li>
+                    <li class="footer-link">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+1234567890"></a>
+                    </li>
+                    <li class="footer-link">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>New Delhi, India</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Newsletter</h3>
+                <p>Subscribe to our newsletter for legal updates and insights.</p>
+                <form class="subscribe-form">
+                    <input type="email" class="subscribe-input" placeholder="Enter your email">
+                    <button type="submit" class="subscribe-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> LegalLearn. All rights reserved.</p>
+        </div>
+
+        <button class="back-to-top" id="backToTop">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+    <script src="assets/js/resources.js"></script>
+</body>
+</html>

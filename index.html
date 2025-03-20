@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive legal education platform covering criminal law, corporate law, taxation, human rights, cybersecurity, dispute resolution, and environmental law.">
+    <meta property="og:title" content="LegalLearn - Modern Legal Education Platform">
+    <meta property="og:description" content="Access structured, user-friendly legal education resources across all major domains of law.">
+    <meta property="og:type" content="website">
+    <title>LegalLearn </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+   
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <div class="logo-icon"><i class="fas fa-balance-scale"></i></div>
+                    <div class="logo-text">Legal<span>Learn</span></div>
+                </div>
+                <div class="sidebar-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="sidebarSearch" placeholder="Search legal topics...">
+                    <div class="search-results" id="searchResults"></div>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="constitutional-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-balance-scale"></i> Constitutional Law
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="criminal-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-gavel"></i> Criminal Law
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="civil-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-book-reader"></i> Civil Law
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="corporate-business-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-briefcase"></i> Corporate & Business Law
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="intellectual-property-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-copyright"></i> Intellectual Property Law
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="taxation-laws.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-chart-pie"></i> Taxation Laws
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="cyber-it-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-shield-alt"></i> Cyber & IT Laws
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="consumer-protection-laws.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-shopping-cart"></i> Consumer Protection Laws
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="employment-labor-laws.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-building"></i> Employment & Labor Laws
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="enviornmental-laws.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-leaf"></i> Environmental Laws
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="alternative-dispute-resolution.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-handshake"></i> Alternative Dispute Resolution
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="legal-ethics.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-gavel"></i>Legal Ethics
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="international-trade-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-globe"></i>International Trade Law
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="human-rights.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-users"></i>Human Rights
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="faqs.html" class="nav-link">
+                        <i class="fas fa-question-circle"></i> FAQs
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="resources.html" class="nav-link">
+                        <i class="fas fa-book"></i> Resources
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">
+                        <i class="fas fa-info-circle"></i> About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact-us.html" class="nav-link">
+                        <i class="fas fa-envelope"></i> Contact
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+    <div class="container">
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="top-bar">
+                 <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <label class="theme-switch">
+                        <input type="checkbox" id="themeSwitch">
+                        <span class="slider"></span>
+                        <i class="fas fa-sun theme-icon sun-icon"></i>
+                        <i class="fas fa-moon theme-icon moon-icon"></i>
+                    </label>
+                </div>
+                
+            
+
+            <section id="home" class="fade-in">
+                <h1 class="section-title">Legal Learn: The Ultimate Global Legal & Learning Platform</h1>
+                <p>Welcome to LegalLearn - a comprehensive platform for legal education covering various branches of law. Our goal is to provide structured, user-friendly legal resources that help you understand complex legal concepts with ease.</p>
+                
+                <div class="card slide-up" style="margin-top: 1.5rem;">
+                    <div class="card-header">
+                        <h2 class="card-title">Getting Started with LegalLearn</h2>
+                        <div class="card-icon"><i class="fas fa-rocket"></i></div>
+                    </div>
+                    <div class="card-body">
+                        <p>LegalLearn is organized into seven major categories of law. Each section contains comprehensive information on legal concepts, landmark cases, procedures, and practical applications.</p>
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+                                <div>Explore different branches of law through our well-structured categories</div>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+                                <div>Use the search function to quickly find specific legal topics</div>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+                                <div>Bookmark important sections for future reference</div>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+                                <div>Toggle between light and dark modes for comfortable reading</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#categories" class="btn btn-primary">Explore Categories</a>
+                        <span class="badge badge-secondary">Updated March 2025</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="categories" class="fade-in" style="margin-top: 2.5rem;">
+                <h2 class="section-title">Legal Categories</h2>
+                <div class="grid">
+                    <!-- Constitutional Law Card -->
+                    <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Constitutional Law</h3>
+                            <div class="card-icon"><i class="fas fa-balance-scale"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Explore fundamental rights, directive principles, federal structure, and constitutional authorities.</p>
+                        </div>
+                    </div>
+                    <!-- Administrative Law Card -->
+                    <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Administrative Law</h3>
+                            <div class="card-icon"><i class="fas fa-scroll"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Explore fundamental rights, directive principles, federal structure, and constitutional authorities.</p>
+                        </div>
+                    </div>
+
+                    <!-- Criminal Law Card -->
+                    <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Criminal Law</h3>
+                            <div class="card-icon"><i class="fas fa-gavel"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Study IPC sections, criminal procedures, and evidence law.</p>
+                        </div>
+                    </div>
+
+                    <!-- Civil Law Card -->
+                    <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Civil Law</h3>
+                            <div class="card-icon"><i class="fas fa-book-reader"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Learn about contract law, property law, and family law.</p>
+                        </div>
+                    </div>
+
+                    <!-- Corporate & Business Law Card -->
+                    <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Corporate & Business Law</h3>
+                            <div class="card-icon"><i class="fas fa-briefcase"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Understand company law, securities law, and competition law.</p>
+                        </div>
+                    </div>
+
+                    <!-- Intellectual Property Law Card -->
+                    <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Intellectual Property Law</h3>
+                            <div class="card-icon"><i class="fas fa-copyright"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Study patents, trademarks, and copyright laws.</p>
+                        </div>
+                    </div>
+
+                    <!-- Taxation Laws Card -->
+                    <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Taxation Laws</h3>
+                            <div class="card-icon"><i class="fas fa-chart-pie"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Learn about direct taxes, indirect taxes, and GST.</p>
+                        </div>
+                    </div>
+
+                    <!-- Cyber & IT Laws Card -->
+                    <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Cyber & IT Laws</h3>
+                            <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Explore cybercrime, data protection, and digital rights.</p>
+                        </div>
+                    </div>
+
+                    <!-- Consumer Protection Laws Card -->
+                    <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Consumer Protection Laws</h3>
+                            <div class="card-icon"><i class="fas fa-shopping-cart"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Learn about consumer rights, product liability, and dispute resolution.</p>
+                        </div>
+                    </div>
+
+                    <!-- Employment & Labor Laws Card -->
+                    <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Employment & Labor Laws</h3>
+                            <div class="card-icon"><i class="fas fa-building"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Study employment rights, workplace safety, and industrial relations.</p>
+                        </div>
+                    </div>
+
+                    <!-- Environmental Laws Card -->
+                    <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Environmental Laws</h3>
+                            <div class="card-icon"><i class="fas fa-leaf"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Learn about environmental protection, wildlife protection, and pollution control.</p>
+                        </div>
+                    </div>
+                     <!--Alternative Dispute Resolution Card -->
+                     <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title"> Alternative Dispute Resolution</h3>
+                            <div class="card-icon"><i class="fas fa-handshake"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Learn about out-of-court conflict resolution methods like arbitration, mediation, conciliation, and negotiation, which help settle disputes efficiently without litigation..</p>
+                        </div>
+                    </div>
+                     <!--Legal Ethics Card -->
+                     <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title"> Legal Ethics</h3>
+                            <div class="card-icon"><i class="fas fa-gavel"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Learn about the moral responsibilities, professional conduct, and ethical duties of lawyers, including client confidentiality, conflict of interest, and courtroom decorum.</p>
+                        </div>
+                    </div>
+                     <!--Internation Trade Law Card -->
+                     <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title"> International Trade Law</h3>
+                            <div class="card-icon"><i class="fas fa-globe"></i></div>
+                        </div>
+                            <div class="card-body">
+                            <p>Learn about the rules, agreements, and regulations governing global trade, including WTO laws, tariffs, trade barriers, and dispute resolution mechanisms.</p>
+                        </div>
+                 </div>
+                    <!--Human Rights Card -->
+                    <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Human Rights</h3>
+                            <div class="card-icon"><i class="fas fa-users"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Learn about the fundamental freedoms, dignity, and legal protections of individuals as recognized by national laws and international frameworks like the Universal Declaration of Human Rights (UDHR).</p>
+                        </div>
+                    </div>
+                    <!--Contract Laws -->
+                    <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Contract Law</h3>
+                            <div class="card-icon"><i class="fas fa-file-contract icon"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Learn about agreements, essential elements (offer, acceptance, consideration), types of contracts, breach, remedies, and enforcement.</p>
+                        </div>
+                    </div>
+                    <!--General and Legal English  -->
+                    <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Legal English</h3>
+                            <div class="card-icon"><i class="fas fa-book icon"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Legal English focuses on specialized vocabulary, drafting, interpretation, and usage of precise legal terms in contracts, court proceedings, and legal documents.</p>
+                        </div>
+                    </div>
+                    <!--Law of Torts  -->
+                    <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Law of Torts</h3>
+                            <div class="card-icon"><i class="fas fa-file-signature"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Legal English focuses on specialized vocabulary, drafting, interpretation, and usage of precise legal terms in contracts, court proceedings, and legal documents.</p>
+                        </div>
+                    </div>
+                    <!--Family law  -->
+                    <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Family Law</h3>
+                            <div class="card-icon"><i class="fas fa-people-roof"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Legal English focuses on specialized vocabulary, drafting, interpretation, and usage of precise legal terms in contracts, court proceedings, and legal documents.</p>
+                        </div>
+                    </div>
+                    <!--Civil Procedure Code   -->
+                    <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Civil Procedure Act</h3>
+                            <div class="card-icon"><i class="fas fa-landmark"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Legal English focuses on specialized vocabulary, drafting, interpretation, and usage of precise legal terms in contracts, court proceedings, and legal documents.</p>
+                        </div>
+                    </div>
+                     <!--Banking Law   -->
+                     <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Banking Law</h3>
+                            <div class="card-icon"><i class="fas fa-money-bill-wave"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Legal English focuses on specialized vocabulary, drafting, interpretation, and usage of precise legal terms in contracts, court proceedings, and legal documents.</p>
+                        </div>
+                    </div>
+                     <!--Insurance Laws   -->
+                     <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Insurance Laws</h3>
+                            <div class="card-icon"><i class="fas fa-file-medical"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Legal English focuses on specialized vocabulary, drafting, interpretation, and usage of precise legal terms in contracts, court proceedings, and legal documents.</p>
+                        </div>
+                    </div>
+                     <!--Property Law   -->
+                     <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Property Law</h3>
+                            <div class="card-icon"><i class="fas fa-house"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Legal English focuses on specialized vocabulary, drafting, interpretation, and usage of precise legal terms in contracts, court proceedings, and legal documents.</p>
+                        </div>
+                    </div>
+                    <!--Industrial Laws   -->
+                    <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Industrial Laws</h3>
+                            <div class="card-icon"><i class="fas fa-industry"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Legal English focuses on specialized vocabulary, drafting, interpretation, and usage of precise legal terms in contracts, court proceedings, and legal documents.</p>
+                        </div>
+                    </div>
+                    <!--Competition Laws   -->
+                    <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Competition Laws</h3>
+                            <div class="card-icon"><i class="fas fa-scale-unbalanced"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Legal English focuses on specialized vocabulary, drafting, interpretation, and usage of precise legal terms in contracts, court proceedings, and legal documents.</p>
+                        </div>
+                    </div>
+                    <!--land Laws   -->
+                    <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Land Laws</h3>
+                            <div class="card-icon"><i class="fas fa-earth-americas"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Legal English focuses on specialized vocabulary, drafting, interpretation, and usage of precise legal terms in contracts, court proceedings, and legal documents.</p>
+                        </div>
+                    </div>
+                    <!--Citizenship and Emigration Laws   -->
+                    <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Citizenship and Emigration Laws</h3>
+                            <div class="card-icon"><i class="fas fa-passport"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Legal English focuses on specialized vocabulary, drafting, interpretation, and usage of precise legal terms in contracts, court proceedings, and legal documents.</p>
+                        </div>
+                    </div>
+                    <!--Women and Laws   -->
+                    <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Women and Law</h3>
+                            <div class="card-icon"><i class="fas fa-venus"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Legal English focuses on specialized vocabulary, drafting, interpretation, and usage of precise legal terms in contracts, court proceedings, and legal documents.</p>
+                        </div>
+                    </div>
+                    <!--Media Law-->
+                    <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Media Law</h3>
+                            <div class="card-icon"><i class="fas fa-newspaper"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Legal English focuses on specialized vocabulary, drafting, interpretation, and usage of precise legal terms in contracts, court proceedings, and legal documents.</p>
+                        </div>
+                    </div>
+                     <!--Public Card-->
+                     <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Public Law</h3>
+                            <div class="card-icon"><i class="fas fa-landmark"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Legal English focuses on specialized vocabulary, drafting, interpretation, and usage of precise legal terms in contracts, court proceedings, and legal documents.</p>
+                        </div>
+                    </div>
+                     <!--Commercial Law-->
+                     <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Commercial Law</h3>
+                            <div class="card-icon"><i class="fas fa-briefcase"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Legal English focuses on specialized vocabulary, drafting, interpretation, and usage of precise legal terms in contracts, court proceedings, and legal documents.</p>
+                        </div>
+                    </div>
+                    <!--Conflict of Laws Card-->
+                    <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Conflict of Laws</h3>
+                            <div class="card-icon"><i class="fas fa-arrows-left-right"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Legal English focuses on specialized vocabulary, drafting, interpretation, and usage of precise legal terms in contracts, court proceedings, and legal documents.</p>
+                        </div>
+                    </div>
+                    <!--Jurisprudence Card-->
+                    <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Jurisprudence</h3>
+                            <div class="card-icon"><i class="fas fa-book-open"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Legal English focuses on specialized vocabulary, drafting, interpretation, and usage of precise legal terms in contracts, court proceedings, and legal documents.</p>
+                        </div>
+                    </div>
+                    <!--Law of Evidence-->
+                    <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Law of Evidence</h3>
+                            <div class="card-icon"><i class="fas fa-file-signature"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Legal English focuses on specialized vocabulary, drafting, interpretation, and usage of precise legal terms in contracts, court proceedings, and legal documents.</p>
+                        </div>
+                    </div>
+                    <!--Legislative Drafting card-->
+                    <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Legislative Drafting</h3>
+                            <div class="card-icon"><i class="fas fa-pen-fancy"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <p>Legal English focuses on specialized vocabulary, drafting, interpretation, and usage of precise legal terms in contracts, court proceedings, and legal documents.</p>
+                        </div>
+                    </div>
+                    <!--Merger and Acquistion card-->
+                    <div class="card slide-up">
+                        <div class="card-header">
+                            <h3 class="card-title">Merger and Acquistion</h3>
+                            <div class="card-icon"><i class="fas fa-handshake"></i></div>                        </div>
+                        <div class="card-body">
+                            <p>Legal English focuses on specialized vocabulary, drafting, interpretation, and usage of precise legal terms in contracts, court proceedings, and legal documents.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">About LegalLearn</h3>
+                <p>Comprehensive legal education platform making law accessible and understandable for everyone.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li class="footer-link"><a href="constitutional-law.html">Constitutional Law</a></li>
+                    <li class="footer-link"><a href="criminal-law.html">Criminal Law</a></li>
+                    <li class="footer-link"><a href="civil-law.html">Civil Law</a></li>
+                    <li class="footer-link"><a href="corporate-business-law.html">Corporate Law</a></li>
+                    <li class="footer-link"><a href="resources.html">Resources</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Contact Info</h3>
+                <ul class="footer-links">
+                    <li class="footer-link">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@legallearn.com">info@legallearn.com</a>
+                    </li>
+                    <li class="footer-link">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+1234567890">+1 (234) 567-890</a>
+                    </li>
+                    <li class="footer-link">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>New Delhi, India</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Newsletter</h3>
+                <p>Subscribe to our newsletter for legal updates and insights.</p>
+                <form class="subscribe-form">
+                    <input type="email" class="subscribe-input" placeholder="Enter your email">
+                    <button type="submit" class="subscribe-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> LegalLearn. All rights reserved.</p>
+        </div>
+
+        <button class="back-to-top" id="backToTop">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>

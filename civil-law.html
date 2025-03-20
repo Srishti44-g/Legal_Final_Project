@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive legal education platform covering criminal law, corporate law, taxation, human rights, cybersecurity, dispute resolution, and environmental law.">
+    <meta property="og:title" content="LegalLearn - Modern Legal Education Platform">
+    <meta property="og:description" content="Access structured, user-friendly legal education resources across all major domains of law.">
+    <meta property="og:type" content="website">
+    <title>LegalLearn - Civil Law</title>
+    <link rel="stylesheet" href="assets/css/civil-law.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <div class="logo-icon"><i class="fas fa-balance-scale"></i></div>
+                    <div class="logo-text">Legal<span>Learn</span></div>
+                </div>
+                <div class="sidebar-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="sidebarSearch" placeholder="Search legal topics...">
+                    <div class="search-results" id="searchResults"></div>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="constitutional-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-balance-scale"></i> Constitutional Law
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="criminal-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-gavel"></i> Criminal Law
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="civil-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-book-reader"></i> Civil Law
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="corporate-business-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-briefcase"></i> Corporate & Business Law
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="intellectual-property-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-copyright"></i> Intellectual Property Law
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="taxation-laws.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-chart-pie"></i> Taxation Laws
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="cyber-it-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-shield-alt"></i> Cyber & IT Laws
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="consumer-protection-laws.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-shopping-cart"></i> Consumer Protection Laws
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="employment-labor-laws.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-building"></i> Employment & Labor Laws
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="enviornmental-laws.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-leaf"></i> Environmental Laws
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="alternative-dispute-resolution.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-handshake"></i> Alternative Dispute Resolution
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="legal-ethics.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-gavel"></i>Legal Ethics
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="international-trade-law.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-globe"></i>International Trade Law
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="human-rights.html" class="nav-link dropdown-toggle">
+                        <i class="fas fa-users"></i>Human Rights
+                        <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="faqs.html" class="nav-link">
+                        <i class="fas fa-question-circle"></i> FAQs
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="resources.html" class="nav-link">
+                        <i class="fas fa-book"></i> Resources
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">
+                        <i class="fas fa-info-circle"></i> About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact-us.html" class="nav-link">
+                        <i class="fas fa-envelope"></i> Contact
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+         
+        <main class="main-content">
+            <div class="top-bar">
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <label class="theme-switch">
+                    <input type="checkbox" id="themeSwitch">
+                    <span class="slider"></span>
+                    <i class="fas fa-sun theme-icon sun-icon"></i>
+                    <i class="fas fa-moon theme-icon moon-icon"></i>
+                </label>
+            </div>
+            <section id="civil-law" class="fade-in">
+                <h1 class="section-title">Civil Law</h1>
+                <p>Learn about Property Law, Family Law, Contract Law, and Torts.</p>
+            </section>
+            <br>
+            <div class="content-section fade-in">
+            <div class="intro-section">
+                    <h1 class="section-heading">📜 Civil Law of India</h1><br>
+                
+                    <!-- Major Areas Overview -->
+                    <section id="civil-law" class="law-category slide-up">
+                        <div class="card-header">
+                            <h2>🔹 Introduction to Civil Law</h2><br>
+                            <p>Civil law deals with disputes between individuals, organizations, or entities where compensation or a legal remedy is sought rather than punishment. It protects private rights and provides mechanisms for resolving disputes.
+
+                                In India, civil law covers contracts, property disputes, family matters, consumer rights, corporate disputes, and torts (civil wrongs).</p>
+                        </div>
+                        </section>
+                    <div class="law-types">
+                        <div class="law-type-card">
+                            <h3><i class="fas fa-file-contract"></i> Contract Law</h3>
+                            <p>Indian Contract Act, 1872</p>
+                        </div>
+                        <div class="law-type-card">
+                            <h3><i class="fas fa-home"></i> Property Law</h3>
+                            <p>Transfer of Property Act, 1882</p>
+                        </div>
+                        <div class="law-type-card">
+                            <h3><i class="fas fa-users"></i> Family Law</h3>
+                            <p>Personal Laws & Special Marriage Act</p>
+                        </div>
+                        <div class="law-type-card">
+                            <h3><i class="fas fa-shopping-cart"></i> Consumer Law</h3>
+                            <p>Consumer Protection Act, 2019</p>
+                        </div>
+                    </div>
+
+                    <!-- Add Tort Law and Corporate Law cards -->
+                    <div class="law-types">
+                        <div class="law-type-card">
+                            <h3><i class="fas fa-exclamation-triangle"></i> Tort Law</h3>
+                            <p>Civil Wrongs & Compensation</p>
+                        </div>
+                        <div class="law-type-card">
+                            <h3><i class="fas fa-building"></i> Corporate Law</h3>
+                            <p>Companies Act & Business Laws</p>
+                        </div>
+                        <div class="law-type-card">
+                            <h3><i class="fas fa-lightbulb"></i> Intellectual Property</h3>
+                            <p>Copyright, Patent, Trademark Laws</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contract Law Section -->
+                <section id="contract-law" class="law-category slide-up">
+                    <div class="card-header">
+                        <h2>1️⃣ Contract Law (Indian Contract Act, 1872)</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="legal-reference">
+                            <h3>🔹 Essentials of a Valid Contract (Section 10)</h3>
+                            <ul class="checklist">
+                                <li>Offer and Acceptance – One party makes an offer, the other accepts</li>
+                                <li>Lawful Consideration – Something of value must be exchanged</li>
+                                <li>Free Consent –  No coercion, fraud, undue influence, or misrepresentation</li>
+                                <li>Competency of Parties – Contract must not be illegal or against public policy</li>
+                                <li>Lawful Object – Both must be legally capable of entering into a contract</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="legal-reference">
+                            <h3>🔹 Breach of Contract & Remedies</h3>
+                            <ul class="checklist">
+                                <li>Damages (Compensation for loss) (Section 73-75)</li>
+                                <li>Specific Performance (Court orders contract fulfillment)</li>
+                                <li>Injunction (Restraining a party from doing something)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Property Law Section -->
+                <section id="property-law" class="law-category slide-up">
+                    <div class="card-header">
+                        <h2>2️⃣ Property Law (Transfer of Property Act, 1882 & Other Laws)</h2><br>
+                        <p>Property law deals with ownership, transfer, and disputes over land, houses, and other assets.</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="legal-reference">
+                            <h3>🔹 Types of Property</h3>
+                            <div class="law-types">
+                                <div class="law-type-card">
+                                    <h4>Movable Property</h4>
+                                    <ul class="checklist">
+                                        <li>Cars, jewelry, furniture</li>
+                                        <li>Governed by Sale of Goods Act</li>
+                                    </ul>
+                                </div>
+                                <div class="law-type-card">
+                                    <h4>Immovable Property</h4>
+                                    <ul class="checklist">
+                                        <li>Land, buildings</li>
+                                        <li>Governed by Transfer of Property Act</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="legal-reference">
+                            <h3>🔹 Property Transfer Modes</h3><br>
+                            <ul class="checklist">
+                                <li><strong>Sale (Section 54) –</strong> Permanent transfer for consideration</li>
+                                <li><strong>Lease (Section 105–</strong> Temporary transfer with periodic rent</li>
+                                <li><strong>Mortgage (Section 58-104)–</strong> Pledging property as loan security</li>
+                                <li><strong>Gift (Section 122-129) –</strong> Voluntary transfer without consideration</li>
+                                <li><strong>Will & Inheritance –</strong> Passing assets after the owner's death</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Family Law Section -->
+                <section id="family-law" class="law-category slide-up">
+                    <div class="card-header">
+                        <h2>3️⃣ Family Law  (Marriage, Divorce, Adoption, Inheritance)</h2> <br>
+                        <p>Family law covers personal matters like marriage, divorce, maintenance, adoption, and succession and is governed by religion-specific laws in India.</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="law-table-container">
+                            <h3>🔹 Personal Laws by Religion</h3>
+                            <table class="law-table">
+                                <thead>
+                                    <tr>
+                                        <th>Religion</th>
+                                        <th>Marriage Law</th>
+                                        <th>Divorce Law</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Hindus</td>
+                                        <td>Hindu Marriage Act, 1955</td>
+                                        <td>Hindu Marriage Act, 1955</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Muslims</td>
+                                        <td>Muslim Personal Law</td>
+                                        <td>Dissolution of Muslim Marriages Act, 1939</td>
+                                    </tr>
+                                    <!-- Add more rows for other religions -->
+                                    <tr>
+                                        <td>Christians</td>
+                                        <td>Indian Christian Marriage Act, 1872</td>
+                                        <td>Indian Divorce Act, 1869</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Parsis</td>
+                                        <td>Parsi Marriage & Divorce Act, 1936</td>
+                                        <td>Parsi Marriage & Divorce Act, 1936</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Others</td>
+                                        <td>Special Marriage Act, 1954 (for interfaith marriages)</td>
+                                        <td>Special Marriage Act, 1954</td>                                            
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="legal-reference">
+                            <h3>🔹 Divorce Grounds (Section 13, Hindu Marriage Act)</h3>
+                            <ul class="checklist">
+                                <li>Adultery – Extramarital affair</li>
+                                <li>Cruelty– Physical/mental abuse</li>
+                                <li>Desertion – Leaving spouse without reason</li>
+                                <li>Mental Illness  – Unsound mind</li>
+                                <li>Conversion– Change of religion</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- Consumer Protection Law Section -->
+                <section id="consumer-law" class="law-category slide-up">
+                    <div class="card-header">
+                        <h2>4️⃣ Consumer Protection Law (Consumer Protection Act, 2019)</h2>
+                        <p>The Consumer Protection Act, 2019 safeguards buyers from defective products, unfair trade practices, and misleading advertisements.</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="legal-reference">
+                            <h3>🔹 Consumer Rights</h3>
+                            <ul class="checklist">
+                                <li>Right to Safety – Protection from hazardous goods</li>
+                                <li>Right to Information – Details about price, quality, warranty</li>
+                                <li>Right to Choose – No forced selling</li>
+                                <li>Right to Redressal – Seek legal remedy for unfair practices</li>
+                            </ul>
+                        </div>
+
+                        <div class="law-hierarchy">
+                            <h3>🔹 Consumer Dispute Redressal Forums</h3>
+                            <div class="hierarchy-item">
+                                <div class="hierarchy-number">1</div>
+                                <div>
+                                    <h4>District Consumer Forum</h4>
+                                    <p>Disputes up to ₹1 crore</p>
+                                </div>
+                            </div>
+                            <!-- Add State and National Commission items -->
+                            <div class="hierarchy-item">
+                                <div class="hierarchy-number">1</div>
+                                <div>
+                                    <h4>State Consumer Commission</h4>
+                                    <p>Disputes ₹1 crore – ₹10 crores</p>
+                                </div>
+                            </div>
+                            <div class="hierarchy-item">
+                                <div class="hierarchy-number">1</div>
+                                <div>
+                                    <h4>National Consumer Commission </h4>
+                                    <p>Disputes above ₹10 crores</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tort Law Section -->
+                <section id="tort-law" class="law-category slide-up">
+                    <div class="card-header">
+                        <h2>5️⃣ Tort Law  (Civil Wrongs & Compensation)</h2>
+                        <p>Tort law deals with civil wrongs like defamation, negligence, and trespass, allowing victims to claim compensation.</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="legal-reference">
+                            <h3>🔹 Major Torts in India</h3>
+                            <div class="law-types">
+                                <div class="law-type-card">
+                                    <h4>Defamation</h4>
+                                    <p>False statements harming reputation</p>
+                                </div>
+                                <div class="law-type-card">
+                                    <h4>Negligence</h4>
+                                    <p>Carelessness causing injury</p>
+                                </div>
+                                <!-- Add more tort types -->
+                                <div class="law-type-card">
+                                    <h4>Trespass</h4>
+                                    <p>Unauthorized entry on property</p>
+                            </div>
+                                <div class="law-type-card">
+                                    <h4>Medical Negligence</h4>
+                                    <p>Doctors failing to follow proper standards</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Corporate & Business Laws Section -->
+                <section id="corporate-law" class="law-category slide-up">
+                    <div class="card-header">
+                        <h2>6️⃣ Corporate & Business Laws</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="legal-reference">
+                            <h3>🔹 Key Business Laws in India</h3>
+                            <ul class="checklist">
+                                <li>Companies Act, 2013</li>
+                                <li>Insolvency and Bankruptcy Code (IBC), 2016</li>
+                                <li>Partnership Act, 1932</li>
+                                <li>SEBI Act, 1992</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Intellectual Property Law Section -->
+                <section id="ip-law" class="law-category slide-up">
+                    <div class="card-header">
+                        <h2>7️⃣ Intellectual Property Law</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="legal-reference">
+                            <h3>🔹 IP Protection Framework</h3>
+                            <ul class="checklist">
+                                <li>Copyright Act, 1957 – Books, music, films</li>
+                                <li>Patents Act, 1970 – Inventions</li>
+                                <li>Trademarks Act, 1999 – Brand names and logos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="navigation-dots">
+                <span class="nav-dot" data-section="contract-law"></span>
+                <span class="nav-dot" data-section="property-law"></span>
+                <span class="nav-dot" data-section="family-law"></span>
+                <span class="nav-dot" data-section="consumer-law"></span>
+                <span class="nav-dot" data-section="tort-law"></span>
+                <span class="nav-dot" data-section="corporate-law"></span>
+                <span class="nav-dot" data-section="ip-law"></span>
+            </div>
+        </main>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">About LegalLearn</h3>
+                <p>Comprehensive legal education platform making law accessible and understandable for everyone.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li class="footer-link"><a href="constitutional-law.html">Constitutional Law</a></li>
+                    <li class="footer-link"><a href="criminal-law.html">Criminal Law</a></li>
+                    <li class="footer-link"><a href="civil-law.html">Civil Law</a></li>
+                    <li class="footer-link"><a href="corporate-business-law.html">Corporate Law</a></li>
+                    <li class="footer-link"><a href="resources.html">Resources</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Contact Info</h3>
+                <ul class="footer-links">
+                    <li class="footer-link">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@legallearn.com">info@legallearn.com</a>
+                    </li>
+                    <li class="footer-link">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+1234567890">+1 (234) 567-890</a>
+                    </li>
+                    <li class="footer-link">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>New Delhi, India</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Newsletter</h3>
+                <p>Subscribe to our newsletter for legal updates and insights.</p>
+                <form class="subscribe-form">
+                    <input type="email" class="subscribe-input" placeholder="Enter your email">
+                    <button type="submit" class="subscribe-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> LegalLearn. All rights reserved.</p>
+        </div>
+
+        <button class="back-to-top" id="backToTop">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+    <script src="assets/js/civil-law.js"></script>
+</body>
+</html>

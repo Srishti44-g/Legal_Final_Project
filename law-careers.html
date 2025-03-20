@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Law Careers - LegalLearn</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel ="stylesheet" href ="assets/css/index.css">
+    <link rel ="stylesheet" href ="assets/css/footer.css>
+    <style>
+        :root {
+            --primary: #0a2c5a;
+            --secondary: #d4af37;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        [data-theme="dark"] {
+            --primary: #1a4b8c;
+            --light: #212529;
+            --dark: #f8f9fa;
+            --gray: #adb5bd;
+            --light-gray: #343a40;
+            --white: #2b3035;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            color: #5c42bb;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .nav-menu {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        .nav-menu li {
+            margin-bottom: 5px;
+        }
+
+        .nav-dropdown {
+            list-style-type: circle;
+            padding-left: 20px;
+            margin: 5px 0;
+        }
+
+        .nav-link {
+            color: #5c42bb;
+            text-decoration: none;
+        }
+
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        .search-box {
+            margin-bottom: 15px;
+        }
+
+        .search-box input {
+            padding: 8px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .theme-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .footer-links a {
+            color: #a79efc;
+            text-decoration: none;
+        }
+
+        .contact-info {
+            margin: 15px 0;
+        }
+
+        .newsletter-form {
+            margin: 15px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .newsletter-form input {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+        }
+
+        .newsletter-form button {
+            padding: 8px 12px;
+            background-color: var(--secondary);
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        .main-content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        .section-title {
+            color: var(--primary);
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 10px;
+        }
+
+        .feature-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .feature-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .feature-item:last-child {
+            border-bottom: none;
+        }
+
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        th {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        tr:hover {
+            background-color: var(--light-gray);
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                padding: 10px;
+            }
+            
+            .card {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+ <!-- Sidebar Navigation -->
+ <aside class="sidebar">
+    <div class="sidebar-header">
+        <div class="logo">
+            <div class="logo-icon"><i class="fas fa-balance-scale"></i></div>
+            <div class="logo-text">Legal<span>Learn</span></div>
+        </div>
+        <div class="sidebar-search">
+            <i class="fas fa-search"></i>
+            <input type="text" id="sidebarSearch" placeholder="Search legal topics...">
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
+    <ul class="nav-menu">
+        <li class="nav-item">
+            <a href="index.html" class="nav-link active">
+                <i class="fas fa-home"></i> Home
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="constitutional-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-balance-scale"></i> Constitutional Law
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="criminal-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-gavel"></i> Criminal Law
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="civil-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-book-reader"></i> Civil Law
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="corporate-business-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-briefcase"></i> Corporate & Business Law
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="intellectual-property-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-copyright"></i> Intellectual Property Law
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="taxation-laws.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-chart-pie"></i> Taxation Laws
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="cyber-it-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-shield-alt"></i> Cyber & IT Laws
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="consumer-protection-laws.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-shopping-cart"></i> Consumer Protection Laws
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="employment-labor-laws.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-building"></i> Employment & Labor Laws
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="enviornmental-laws.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-leaf"></i> Environmental Laws
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="alternative-dispute-resolution.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-handshake"></i> Alternative Dispute Resolution
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="legal-ethics.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-gavel"></i>Legal Ethics
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="international-trade-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-globe"></i>International Trade Law
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="human-rights.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-users"></i>Human Rights
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="faqs.html" class="nav-link">
+                <i class="fas fa-question-circle"></i> FAQs
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="resources.html" class="nav-link">
+                <i class="fas fa-book"></i> Resources
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="about.html" class="nav-link">
+                <i class="fas fa-info-circle"></i> About
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="contact-us.html" class="nav-link">
+                <i class="fas fa-envelope"></i> Contact
+            </a>
+        </li>
+    </ul>
+</aside>
+        <section class="card">
+            <h2 class="section-title"><i class="fas fa-gavel"></i> Traditional Legal Careers</h2>
+            <ul class="feature-list">
+                <li class="feature-item"><strong>Advocate/Lawyer:</strong> Represents clients in courts, provides legal advice, drafts documents, and negotiates settlements. <em>Skills:</em> Litigation, legal research, negotiation, persuasive speaking, and contract drafting.</li>
+                <li class="feature-item"><strong>Litigation Lawyer:</strong> Specializes in arguing cases in courts, handling legal disputes between individuals, companies, or government bodies. <em>Skills:</em> Courtroom tactics, cross-examination, forensic analysis.</li>
+                <li class="feature-item"><strong>Criminal Lawyer:</strong> Represents clients in criminal cases, either as a defense lawyer or a prosecutor. <em>Skills:</em> Courtroom tactics, cross-examination, forensic analysis.</li>
+                <li class="feature-item"><strong>Civil Lawyer:</strong> Deals with non-criminal disputes like property, contracts, family law, and inheritance cases. <em>Skills:</em> Legal documentation, negotiation, mediation, and arbitration.</li>
+            </ul>
+        </section>
+        <section class="card">
+            <h2 class="section-title"><i class="fas fa-balance-scale"></i> Judiciary & Government Legal Services</h2>
+            <ul class="feature-list">
+                <li class="feature-item"><strong>Judge/Magistrate:</strong> Interprets laws, oversees trials, and delivers verdicts in cases. <em>Eligibility:</em> Judicial exams and years of legal experience.</li>
+                <li class="feature-item"><strong>Public Prosecutor:</strong> Represents the government in criminal cases, ensuring justice is served. <em>Eligibility:</em> Law degree, legal experience, and passing Public Prosecutor exams.</li>
+                <li class="feature-item"><strong>Legal Advisor for Government Agencies:</strong> Provides legal advice to government departments, helping in policy-making and legal compliance.</li>
+            </ul>
+        </section>
+        <section class="card">
+            <h2 class="section-title"><i class="fas fa-briefcase"></i> Specialized Legal Fields</h2>
+            <ul class="feature-list">
+                <li class="feature-item"><strong>Corporate Lawyer:</strong> Works with businesses on contracts, mergers, compliance, intellectual property, and legal disputes.</li>
+                <li class="feature-item"><strong>Intellectual Property (IP) Lawyer:</strong> Specializes in patents, trademarks, copyrights, and trade secrets.</li>
+                <li class="feature-item"><strong>Cyber Law Expert:</strong> Deals with cybercrimes like hacking, online fraud, and data privacy laws.</li>
+                <li class="feature-item"><strong>Environmental Lawyer:</strong> Works on climate change laws, pollution control, and sustainability policies.</li>
+                <li class="feature-item"><strong>Tax Lawyer:</strong> Advises individuals and corporations on tax planning, tax disputes, and compliance.</li>
+                <li class="feature-item"><strong>Immigration Lawyer:</strong> Handles cases related to visas, citizenship, asylum, and deportation.</li>
+            </ul>
+        </section>
+        <section class="card">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> Alternative Legal Careers</h2>
+            <ul class="feature-list">
+                <li class="feature-item"><strong>Legal Journalist:</strong> Covers legal news, court cases, and policy changes for newspapers, TV, and digital platforms.</li>
+                <li class="feature-item"><strong>Legal Tech Entrepreneur:</strong> Creates legal tech solutions like AI-based legal assistants, contract automation tools, and online dispute resolution platforms.</li>
+                <li class="feature-item"><strong>Law Professor/Academic Researcher:</strong> Teaches law students and conducts research on legal theories, reforms, and new regulations.</li>
+                <li class="feature-item"><strong>Arbitrator/Mediator:</strong> Resolves disputes outside of court through negotiation and arbitration.</li>
+            </ul>
+        </section>
+        <section class="card">
+            <h2 class="section-title"><i class="fas fa-rocket"></i> Emerging Legal Careers</h2>
+            <ul class="feature-list">
+                <li class="feature-item"><strong>Space Law Expert:</strong> Works on space exploration laws, satellite regulations, and international treaties.</li>
+                <li class="feature-item"><strong>Artificial Intelligence & Law:</strong> Specializes in AI ethics, algorithm regulations, and legal automation.</li>
+                <li class="feature-item"><strong>E-Discovery & Legal Data Analyst:</strong> Uses big data and AI to analyze legal documents and predict case outcomes.</li>
+            </ul>
+        </section>
+        <section class="card">
+            <h2 class="section-title"><i class="fas fa-compass"></i> Conclusion – Choosing the Right Legal Career</h2>
+            <p>Choosing a legal career depends on your interests, skills, and long-term goals. Here are some suggestions based on different interests:</p>
+            <table class="table-responsive">
+                <thead>
+                    <tr>
+                        <th>Interest</th>
+                        <th>Best Career Paths</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Courtroom Advocacy</td>
+                        <td>Lawyer, Criminal Lawyer, Litigation</td>
+                    </tr>
+                    <tr>
+                        <td>Corporate Sector</td>
+                        <td>Corporate Lawyer, Legal Consultant</td>
+                    </tr>
+                    <tr>
+                        <td>Government Services</td>
+                        <td>Judge, Public Prosecutor, Government Lawyer</td>
+                    </tr>
+                    <tr>
+                        <td>Specialized Fields</td>
+                        <td>IP Law, Cyber Law, Tax Law, Environmental Law</td>
+                    </tr>
+                    <tr>
+                        <td>Alternative Careers</td>
+                        <td>Legal Tech, Journalism, Arbitration</td>
+                    </tr>
+                    <tr>
+                        <td>Future Technologies</td>
+                        <td>AI & Law, E-Discovery, Space Law</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <footer>
+        <h3>About LegalLearn</h3>
+        <p>Comprehensive legal education platform making law accessible and understandable for everyone.</p>
+        
+        <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        
+        <div class="footer-links">
+            <a href="constitutional-law.html">Constitutional Law</a>
+            <a href="criminal-law.html">Criminal Law</a>
+            <a href="civil-law.html">Civil Law</a>
+            <a href="corporate-business-law.html">Corporate Law</a>
+            <a href="resources.html">Resources</a>
+        </div>
+        
+        <div class="contact-info">
+            <p><i class="fas fa-envelope"></i> <a href="mailto:info@legallearn.com">info@legallearn.com</a></p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            <p><i class="fas fa-map-marker-alt"></i> New Delhi, India</p>
+        </div>
+        
+        <div class="newsletter">
+            <p>Subscribe to our newsletter for legal updates and insights.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email">
+                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+        
+        <p>&copy; LegalLearn. All rights reserved.</p>
+        <a href="#" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentYear = new Date().getFullYear();
+            const yearElements = document.querySelectorAll('#currentYear');
+            yearElements.forEach(element => {
+                element.textContent = currentYear;
+            });
+
+            // Back to top button functionality
+            const backToTopButton = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.style.opacity = '1';
+                    backToTopButton.style.visibility = 'visible';
+                } else {
+                    backToTopButton.style.opacity = '0';
+                    backToTopButton.style.visibility = 'hidden';
+                }
+            });
+
+            backToTopButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

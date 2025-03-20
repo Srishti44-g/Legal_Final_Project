@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Book Library</title>
+    <link rel ="stylesheet" href ="assets/css/civil-law.css">
+    <link rel = "stylesheet" href ="assets/css/footer.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Legal Library</h2>
+            <input type="text" id="search" placeholder="Search books...">
+            <ul>
+                <li>📜 Constitutional Law</li>
+                <li>⚖️ Criminal Law</li>
+                <li>🏛 Civil Law</li>
+                <li>📚 Corporate Law</li>
+                <li>🌎 International Law</li>
+                <li>💻 Cyber Law</li>
+            </ul>
+            <button id="toggle-theme">Toggle Dark Mode</button>
+        </aside>
+        <main class="content">
+            <h1>Featured Books</h1>
+            <div class="book-list" id="book-list">
+                <div class="book">The Constitution of India - Dr. B.R. Ambedkar</div>
+                <div class="book">Introduction to the Constitution of India - D.D. Basu</div>
+                <div class="book">Jurisprudence - H.L.A. Hart</div>
+                <div class="book">Indian Penal Code - Ratanlal & Dhirajlal</div>
+            </div>
+        </main>
+    </div>
+
+    
+    <script>
+        document.getElementById('toggle-theme').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+        });
+
+        document.getElementById('search').addEventListener('input', function() {
+            let filter = this.value.toLowerCase();
+            let books = document.querySelectorAll('.book');
+            books.forEach(book => {
+                book.style.display = book.textContent.toLowerCase().includes(filter) ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>

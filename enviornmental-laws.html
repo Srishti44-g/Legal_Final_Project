@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive legal education platform covering criminal law, corporate law, taxation, human rights, cybersecurity, dispute resolution, and environmental law.">
+    <meta property="og:title" content="LegalLearn - Modern Legal Education Platform">
+    <meta property="og:description" content="Access structured, user-friendly legal education resources across all major domains of law.">
+    <meta property="og:type" content="website">
+    <title>LegalLearn - Environmental Laws</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/law-pages.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        
+ <!-- Sidebar Navigation -->
+ <aside class="sidebar">
+    <div class="sidebar-header">
+        <div class="logo">
+            <div class="logo-icon"><i class="fas fa-balance-scale"></i></div>
+            <div class="logo-text">Legal<span>Learn</span></div>
+        </div>
+        <div class="sidebar-search">
+            <i class="fas fa-search"></i>
+            <input type="text" id="sidebarSearch" placeholder="Search legal topics...">
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
+    <ul class="nav-menu">
+        <li class="nav-item">
+            <a href="index.html" class="nav-link">
+                <i class="fas fa-home"></i> Home
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="constitutional-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-balance-scale"></i> Constitutional Law
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="criminal-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-gavel"></i> Criminal Law
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="civil-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-book-reader"></i> Civil Law
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="corporate-business-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-briefcase"></i> Corporate & Business Law
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="intellectual-property-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-copyright"></i> Intellectual Property Law
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="taxation-laws.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-chart-pie"></i> Taxation Laws
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="cyber-it-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-shield-alt"></i> Cyber & IT Laws
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="consumer-protection-laws.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-shopping-cart"></i> Consumer Protection Laws
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="employment-labor-laws.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-building"></i> Employment & Labor Laws
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="enviornmental-laws.html" class="nav-link active">
+                <i class="fas fa-leaf"></i> Environmental Laws
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="alternative-dispute-resolution.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-handshake"></i> Alternative Dispute Resolution
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="legal-ethics.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-gavel"></i>Legal Ethics
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="international-trade-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-globe"></i>International Trade Law
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="human-rights.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-users"></i>Human Rights
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="faqs.html" class="nav-link">
+                <i class="fas fa-question-circle"></i> FAQs
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="resources.html" class="nav-link">
+                <i class="fas fa-book"></i> Resources
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="about.html" class="nav-link">
+                <i class="fas fa-info-circle"></i> About
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="contact-us.html" class="nav-link">
+                <i class="fas fa-envelope"></i> Contact
+            </a>
+        </li>
+    </ul>
+</aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="top-bar">
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <label class="theme-switch">
+                    <input type="checkbox" id="themeSwitch">
+                    <span class="slider"></span>
+                    <i class="fas fa-sun theme-icon sun-icon"></i>
+                    <i class="fas fa-moon theme-icon moon-icon"></i>
+                </label>
+            </div>
+            <section id="enviornmental-laws" class="fade-in">
+                <h1 class="section-title">Environmental Laws</h1>
+                <p class="lead">Comprehensive guide to environmental laws focusing on pollution control, conservation, sustainable development, and climate action at global and national levels.</p>
+                
+                <!-- Environmental Laws in India Section -->
+                <div class="card slide-up">
+                    <div class="card-header">
+                        <h2 class="card-title">4. Environmental Laws in India</h2>
+                        <div class="card-icon"><i class="fas fa-tree"></i></div>
+                    </div>
+                    <div class="card-body">
+                        <p>Environmental laws in India focus on pollution control, conservation, sustainable development, and climate action.</p>
+                        
+                        <h3 class="sub-section-title"><i class="fas fa-clipboard-list" style="color: var(--secondary); margin-right: 10px;"></i> Key Environmental Laws & Regulations</h3>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle feature-icon"></i>
+                                <div>
+                                    <h4>Environment Protection Act, 1986</h4>
+                                    <p>Regulates pollution, hazardous substances, and environmental conservation.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle feature-icon"></i>
+                                <div>
+                                    <h4>Air (Prevention and Control of Pollution) Act, 1981</h4>
+                                    <p>Regulates air pollution and emission standards.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle feature-icon"></i>
+                                <div>
+                                    <h4>Water (Prevention and Control of Pollution) Act, 1974</h4>
+                                    <p>Regulates wastewater disposal and pollution control.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle feature-icon"></i>
+                                <div>
+                                    <h4>Forest Conservation Act, 1980</h4>
+                                    <p>Prevents deforestation and regulates forest land use.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle feature-icon"></i>
+                                <div>
+                                    <h4>Wildlife Protection Act, 1972</h4>
+                                    <p>Protects endangered species and wildlife habitats.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle feature-icon"></i>
+                                <div>
+                                    <h4>Biological Diversity Act, 2002</h4>
+                                    <p>Prevents biopiracy and promotes biodiversity conservation.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle feature-icon"></i>
+                                <div>
+                                    <h4>Hazardous Waste Management Rules, 2016</h4>
+                                    <p>Regulates handling and disposal of hazardous waste.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle feature-icon"></i>
+                                <div>
+                                    <h4>E-Waste (Management) Rules, 2016</h4>
+                                    <p>Mandates recycling and safe disposal of electronic waste.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle feature-icon"></i>
+                                <div>
+                                    <h4>Coastal Regulation Zone (CRZ) Rules</h4>
+                                    <p>Protects coastal environments and marine biodiversity.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle feature-icon"></i>
+                                <div>
+                                    <h4>National Green Tribunal (NGT) Act, 2010</h4>
+                                    <p>Special tribunal for environmental disputes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                        <span class="badge badge-secondary">Updated 2024</span>
+                    </div>
+                </div>
+
+                <!-- Environmental Protection Section -->
+                <div class="card slide-up">
+                    <div class="card-header">
+                        <h2 class="card-title">5. Environmental Protection & Sustainable Development</h2>
+                        <div class="card-icon"><i class="fas fa-seedling"></i></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="multi-section">
+                            <!-- Pollution Control Measures -->
+                            <div class="sub-section">
+                                <h3 class="sub-section-title"><i class="fas fa-industry" style="color: var(--secondary); margin-right: 10px;"></i> A. Pollution Control Measures</h3>
+                                <div class="feature-list">
+                                    <div class="feature-item">
+                                        <i class="fas fa-building feature-icon"></i>
+                                        <div>
+                                            <h4>Industries Must Follow Emission Standards</h4>
+                                            <p>Set by the Central Pollution Control Board (CPCB).</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="fas fa-hand-holding-usd feature-icon"></i>
+                                        <div>
+                                            <h4>Penalty for Water & Air Pollution</h4>
+                                            <p>Heavy fines & shutdown of industries violating laws.</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="fas fa-file-alt feature-icon"></i>
+                                        <div>
+                                            <h4>Mandatory Environmental Clearance (EC)</h4>
+                                            <p>For large infrastructure projects.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Renewable Energy & Climate Change -->
+                            <div class="sub-section">
+                                <h3 class="sub-section-title"><i class="fas fa-solar-panel" style="color: var(--secondary); margin-right: 10px;"></i> B. Renewable Energy & Climate Change Laws</h3>
+                                <div class="feature-list">
+                                    <div class="feature-item">
+                                        <i class="fas fa-sun feature-icon"></i>
+                                        <div>
+                                            <h4>Government Promotes Solar & Wind Energy</h4>
+                                            <p>Renewable Energy Act being formulated.</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="fas fa-globe-asia feature-icon"></i>
+                                        <div>
+                                            <h4>India's Commitment to Net Zero Carbon Emissions</h4>
+                                            <p>Target set for 2070.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Waste Management & Recycling -->
+                            <div class="sub-section">
+                                <h3 class="sub-section-title"><i class="fas fa-recycle" style="color: var(--secondary); margin-right: 10px;"></i> C. Waste Management & Recycling</h3>
+                                <div class="feature-list">
+                                    <div class="feature-item">
+                                        <i class="fas fa-ban feature-icon"></i>
+                                        <div>
+                                            <h4>Plastic Waste Management Rules, 2016</h4>
+                                            <p>Ban on single-use plastics.</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="fas fa-industry feature-icon"></i>
+                                        <div>
+                                            <h4>Extended Producer Responsibility (EPR)</h4>
+                                            <p>Companies must follow EPR for waste disposal.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Forest Conservation & Wildlife Protection -->
+                            <div class="sub-section">
+                                <h3 class="sub-section-title"><i class="fas fa-paw" style="color: var(--secondary); margin-right: 10px;"></i> D. Forest Conservation & Wildlife Protection</h3>
+                                <div class="feature-list">
+                                    <div class="feature-item">
+                                        <i class="fas fa-file-signature feature-icon"></i>
+                                        <div>
+                                            <h4>Forest Clearance Required for Industrial Projects</h4>
+                                            <p>To prevent deforestation.</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="fas fa-mountain feature-icon"></i>
+                                        <div>
+                                            <h4>Protected Areas (National Parks & Wildlife Sanctuaries)</h4>
+                                            <p>Strictly regulated for conservation.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                        <span class="badge badge-secondary">Updated 2024</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">About LegalLearn</h3>
+                <p>LegalLearn is a modern platform dedicated to providing comprehensive legal education resources. Our mission is to make legal knowledge accessible and understandable for everyone.</p>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li class="footer-link"><a href="#home">Home</a></li>
+                    <li class="footer-link"><a href="#categories">Categories</a></li>
+                    <li class="footer-link"><a href="#">FAQs</a></li>
+                    <li class="footer-link"><a href="#">Resources</a></li>
+                    <li class="footer-link"><a href="#">About</a></li>
+                    <li class="footer-link"><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Contact Us</h3>
+                <p>If you have any questions or need further information, feel free to reach out to us.</p>
+                <p>Email: support@legallearn.com</p>
+                <p>Phone: +1 234 567 890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 LegalLearn. All rights reserved.
+        </div>
+    </footer>
+    <!-- External JavaScript -->
+    <script src="js/navigation.js"></script>
+    <script src="js/law-pages.js"></script>
+</body>
+</html>

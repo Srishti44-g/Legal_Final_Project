@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs & Legal Resources | LegalEdu Pro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        :root {
+            --primary: #0A2463;
+            --secondary: #D4AF37;
+            --light: #F8F8F8;
+            --gray: #6C757D;
+            --dark: #212529;
+            --success: #28a745;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --serif: 'Georgia', serif;
+            --sans: 'Helvetica', 'Arial', sans-serif;
+        }
+
+        /* Light Mode (Default) */
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            font-family: var(--sans);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s ease;
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            background-color: #1a1a2e;
+            color: #e6e6e6;
+        }
+
+        body.dark-mode .card,
+        body.dark-mode .accordion-item,
+        body.dark-mode .form-control,
+        body.dark-mode .form-select,
+        body.dark-mode .tab-content,
+        body.dark-mode .template-card {
+            background-color: #16213e;
+            color: #e6e6e6;
+            border-color: #0f3460;
+        }
+
+        body.dark-mode .card-header,
+        body.dark-mode .accordion-button:not(.collapsed),
+        body.dark-mode .nav-tabs .nav-link.active {
+            background-color: #0f3460;
+            color: #e6e6e6;
+        }
+
+        body.dark-mode .navbar {
+            background-color: #0f3460 !important;
+        }
+
+        body.dark-mode .btn-outline-primary {
+            color: var(--secondary);
+            border-color: var(--secondary);
+        }
+
+        body.dark-mode .btn-primary {
+            background-color: #0f3460;
+            border-color: #0f3460;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--serif);
+            color: var(--primary);
+        }
+
+        body.dark-mode h1, 
+        body.dark-mode h2, 
+        body.dark-mode h3, 
+        body.dark-mode h4, 
+        body.dark-mode h5, 
+        body.dark-mode h6 {
+            color: var(--secondary);
+        }
+
+        .navbar {
+            background-color: var(--primary) !important;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
+        }
+
+        .navbar-brand {
+            font-family: var(--serif);
+            font-weight: bold;
+            color: white !important;
+        }
+
+        .nav-link {
+            color: white !important;
+            margin: 0 10px;
+            font-weight: 500;
+        }
+
+        #theme-toggle {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(10, 36, 99, 0.8), rgba(10, 36, 99, 0.9)), url('/api/placeholder/1200/400');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-family: var(--serif);
+            font-weight: bold;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+        }
+
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 50px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-btn {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--primary);
+            border: none;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .search-btn:hover {
+            background: var(--secondary);
+        }
+
+        .search-suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            max-height: 300px;
+            overflow-y: auto;
+            display: none;
+        }
+
+        body.dark-mode .search-suggestions {
+            background: #16213e;
+        }
+
+        .suggestion-item {
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .suggestion-item:hover {
+            background: #f0f0f0;
+        }
+
+        body.dark-mode .suggestion-item:hover {
+            background: #0f3460;
+        }
+
+        .card {
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            border: none;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            background-color: var(--primary);
+            color: white;
+            font-family: var(--serif);
+            border-radius: 8px 8px 0 0 !important;
+            padding: 1rem 1.5rem;
+        }
+
+        .form-control {
+            border-radius: 4px;
+            padding: 0.8rem 1rem;
+            border: 1px solid #ced4da;
+            margin-bottom: 1.2rem;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.2rem rgba(10, 36, 99, 0.25);
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            font-weight: 600;
+            padding: 0.7rem 2rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #081b4e;
+            border-color: #081b4e;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-primary {
+            color: var(--primary);
+            border-color: var(--primary);
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .nav-tabs {
+            border-bottom: 2px solid var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .nav-tabs .nav-link {
+            color: var(--dark) !important;
+            font-weight: 600;
+            border: none;
+            padding: 1rem 1.5rem;
+            border-radius: 8px 8px 0 0;
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode .nav-tabs .nav-link {
+            color: #e6e6e6 !important;
+        }
+
+        .nav-tabs .nav-link.active {
+            background-color: var(--primary);
+            color: white !important;
+            border: none;
+        }
+
+        .nav-tabs .nav-link:hover:not(.active) {
+            background-color: rgba(10, 36, 99, 0.1);
+        }
+
+        body.dark-mode .nav-tabs .nav-link:hover:not(.active) {
+            background-color: rgba(212, 175, 55, 0.1);
+        }
+
+        .tab-content {
+            background: white;
+            border-radius: 0 0 8px 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .accordion-button {
+            padding: 1.2rem 1.5rem;
+            font-weight: 600;
+            color: var(--primary);
+            background-color: white;
+        }
+
+        body.dark-mode .accordion-button {
+            color: var(--secondary);
+            background-color: #16213e;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: rgba(10, 36, 99, 0.25);
+        }
+
+        .accordion-body {
+            padding: 1.5rem;
+        }
+
+        .template-section {
+            margin-top: 3rem;
+        }
+
+        .template-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .template-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .template-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .template-img {
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8f9fa;
+        }
+
+        body.dark-mode .template-img {
+            background-color: #0f3460;
+        }
+
+        .template-img i {
+            font-size: 3rem;
+            color: var(--primary);
+        }
+
+        body.dark-mode .template-img i {
+            color: var(--secondary);
+        }
+
+        .template-info {
+            padding: 1rem;
+        }
+
+        .template-info h5 {
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        body.dark-mode .template-info h5 {
+            color: var(--secondary);
+        }
+
+        .template-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .badge-pill {
+            padding: 0.3rem 0.6rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .badge-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .badge-secondary {
+            background-color: var(--secondary);
+            color: white;
+        }
+
+        .step-guide {
+            counter-reset: step;
+            margin: 1.5rem 0;
+        }
+
+        .step-item {
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .step-item::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        body.dark-mode .step-item::before {
+            background-color: var(--secondary);
+            color: var(--dark);
+        }
+
+        .feedback-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+        }
+
+        body.dark-mode .feedback-section {
+            background-color: #0f3460;
+        }
+
+        .feedback-question {
+            font-weight: 600;
+        }
+
+        .feedback-buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .helpful-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            background-color: #e9f7ef;
+            color: #2ecc71;
+            padding: 0.3rem 0.6rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        body.dark-mode .helpful-badge {
+            background-color: rgba(46, 204, 113, 0.2);
+        }
+
+        .live-chat-button {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .live-chat-button:hover {
+            background-color: var(--secondary);
+            transform: scale(1.1);
+        }
+
+        .chat-popup {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 350px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            z-index: 1001;
+            overflow: hidden;
+            display: none;
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode .chat-popup {
+            background-color: #16213e;
+        }
+
+        .chat-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .chat-messages {
+            height: 300px;
+            overflow-y: auto;
+            padding: 1rem;
+        }
+
+        .message {
+            margin-bottom: 1rem;
+            max-width: 75%;
+        }
+
+        .message-content {
+            padding: 0.8rem;
+            border-radius: 10px;
+        }
+
+        .message.received {
+            margin-right: auto;
+        }
+
+        .message.received .message-content {
+            background-color: #f1f1f1;
+        }
+
+        body.dark-mode .message.received .message-content {
+            background-color: #0f3460;
+        }
+
+        .message.sent {
+            margin-left: auto;
+        }
+
+        .message.sent .message-content {
+            background-color: #0a2463;
+            color: white;
+        }
+
+        .chat-input {
+            display: flex;
+            padding: 1rem;
+            border-top: 1px solid #eee;
+        }
+
+        body.dark-mode .chat-input {
+            border-top: 1px solid #0f3460;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 0.8rem;
+            border: 1px solid #eee;
+            border-radius: 20px;
+            margin-right: 0.5rem;
+        }
+
+        body.dark-mode .chat-input input {
+            background-color: #0f3460;
+            color: white;
+            border: 1px solid #0f3460;
+        }
+
+        .chat-input button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 0.8rem 1.2rem;
+            cursor: pointer;
+        }
+
+        body.dark-mode .chat-input button {
+            background-color: var(--secondary);
+            color: var(--dark);
+        }
+
+        .close-chat {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .template-cards {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+
+            .hero-section {
+                padding: 3rem 1rem;
+            }
+
+            .nav-tabs .nav-link {
+                padding: 0.8rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .chat-popup {
+                width: 300px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .template-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .feedback-section {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.8rem;
+            }
+
+            .chat-popup {
+                width: 90%;
+                right: 5%;
+            }
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer-copyright {
+            text-align: center;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">LegalEdu Pro</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button id="theme-toggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">Legal Education Help Center</h1>
+            <p class="hero-text">
+                Access comprehensive, trustworthy, and verified answers to common and complex legal questions. 
+                Our extensive FAQ library is curated by legal experts, with step-by-step guides and 
+                official document templates to help you navigate legal processes with confidence.
+            </p>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search legal questions..." id="searchInput">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <div class="search-suggestions" id="searchSuggestions">
+                    <!-- Suggestions will be populated dynamically -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <!-- Legal Categories Tabs -->
+        <ul class="nav nav-tabs" id="legalTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="criminal-tab" data-bs-toggle="tab" data-bs-target="#criminal" type="button" role="tab" aria-controls="criminal" aria-selected="true">Criminal Law</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="civil-tab" data-bs-toggle="tab" data-bs-target="#civil" type="button" role="tab" aria-controls="civil" aria-selected="false">Civil Law</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="family-tab" data-bs-toggle="tab" data-bs-target="#family" type="button" role="tab" aria-controls="family" aria-selected="false">Family Law</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="business-tab" data-bs-toggle="tab" data-bs-target="#business" type="button" role="tab" aria-controls="business" aria-selected="false">Business Law</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="consumer-tab" data-bs-toggle="tab" data-bs-target="#consumer" type="button" role="tab" aria-controls="consumer" aria-selected="false">Consumer Rights</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="employment-tab" data-bs-toggle="tab" data-bs-target="#employment" type="button" role="tab" aria-controls="employment" aria-selected="false">Employment Law</button>
+            </li>
+        </ul>
+        
+        <div class="tab-content" id="legalTabsContent">
+            <!-- Criminal Law Tab -->
+            <div class="tab-pane fade show active" id="criminal" role="tabpanel" aria-labelledby="criminal-tab">
+                <div class="accordion" id="criminalAccordion">
+                    <!-- Criminal FAQ Item 1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="criminal-heading-1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#criminal-collapse-1" aria-expanded="true" aria-controls="criminal-collapse-1">
+                                How to file a First Information Report (FIR)?
+                            </button>
+                        </h2>
+                        <div id="criminal-collapse-1" class="accordion-collapse collapse show" aria-labelledby="criminal-heading-1" data-bs-parent="#criminalAccordion">
+                            <div class="accordion-body">
+                                <div class="helpful-badge">
+                                    <i class="fas fa-thumbs-up"></i>
+                                    <span>Most Helpful Answer (voted by 387 users)</span>
+                                </div>
+                                
+                                <p>A First Information Report (FIR) is a written document prepared by the police when they receive information about the commission of a cognizable offense. Filing an FIR is the first step in the criminal justice process.</p>
+                                
+                                <h5>Legal Framework:</h5>
+                                <p>Under Section 154 of the Criminal Procedure Code (CrPC), any person who has knowledge about a cognizable offense can file an FIR at the nearest police station.</p>
+                                
+                                <div class="step-guide">
+                                    <div class="step-item">
+                                        <h6>Visit the Police Station</h6>
+                                        <p>Go to the police station that has jurisdiction over the area where the crime occurred. In case of emergency, you can file an FIR at any police station (Zero FIR), which will later be transferred to the appropriate station.</p>
+                                    </div>
+                                    
+                                    <div class="step-item">
+                                        <h6>Provide Your Statement</h6>
+                                        <p>Narrate the incident in detail to the officer in charge. Be factual and provide all relevant information such as time, date, location, description of the incident, and identification of suspects (if known).</p>
+                                    </div>
+                                    
+                                    <div class="step-item">
+                                        <h6>Review and Sign the FIR</h6>
+                                        <p>The officer will record your statement in the FIR. Read it carefully before signing to ensure all details are accurately captured. If you cannot read, the officer should read it aloud to you.</p>
+                                    </div>
+                                    
+                                    <div class="step-item">
+                                        <h6>Obtain a Copy of the FIR</h6>
+                                        <p>You have the right to get a free copy of the FIR immediately. Keep this copy safe as it's an important document for the case proceedings.</p>
+                                    </div>
+                                    
+                                    <div class="step-item">
+                                        <h6>Follow Up on the Investigation</h6>
+                                        <p>Note the FIR number and the name of the investigating officer for future reference and follow-ups on the progress of the investigation.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="alert alert-info">
+                                    <h6><i class="fas fa-info-circle me-2"></i>Important Notes:</h6>
+                                    <ul>
+                                        <li>The police cannot refuse to register an FIR. If they do, you can approach the Superintendent of Police or the Magistrate.</li>
+                                        <li>Filing a false FIR is punishable under Section 182 of the Indian Penal Code.</li>
+                                        <li>For certain offenses (like rape, domestic violence), special provisions allow for recording statements in private settings or by women officers.</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="mt-4">
+                                    <h5>Download FIR Templates:</h5>
+                                    <div class="row mt-3">
+                                        <div class="col-md-6">
+                                            <a href="#" class="btn btn-outline-primary w-100 mb-2">
+                                                <i class="far fa-file-pdf me-2"></i>FIR Template (PDF)
+                                            </a>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <a href="#" class="btn btn-outline-primary w-100 mb-2">
+                                                <i class="far fa-file-word me-2"></i>FIR Template (DOC)
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="feedback-section">
+                                    <div class="feedback-question">Was this information helpful?</div>
+                                    <div class="feedback-buttons">
+                                        <button class="btn btn-sm btn-outline-success"><i class="fas fa-thumbs-up me-1"></i>Yes</button>
+                                        <button class="btn btn-sm btn-outline-danger"><i class="fas fa-thumbs-down me-1"></i>No</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Criminal FAQ Item 2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="criminal-heading-2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#criminal-collapse-2" aria-expanded="false" aria-controls="criminal-collapse-2">
+                                How to apply for bail in a criminal case?
+                            </button>
+                        </h2>
+                        <div id="criminal-collapse-2" class="accordion-collapse collapse" aria-labelledby="criminal-heading-2" data-bs-parent="#criminalAccordion">
+                            <div class="accordion-body">
+                                <p>Bail is a provision that allows a person accused of a crime to be temporarily released from custody while awaiting trial, usually on the condition that they provide a guarantee (in cash or property) that they will appear for their trial.</p>
+                                
+                                <h5>Types of Bail:</h5>
+                                <ol>
+                                    <li><strong>Regular Bail:</strong> Applied after arrest under Section 437 and 439 of CrPC.</li>
+                                    <li><strong>Anticipatory Bail:</strong> Applied before arrest under Section 438 of CrPC.</li>
+                                    <li><strong>Interim Bail:</strong> Temporary bail granted for a specified period.</li>
+                                </ol>
+                                
+                                <div class="step-guide">
+                                    <div class="step-item">
+                                        <h6>Determine the Appropriate Court</h6>
+                                        <p>For bail applications, you can approach the court where the crime was committed or the accused is currently being held.</p>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <h6>Gather Necessary Documents</h6>
+                                        <p>Collect documents such as the FIR, medical reports (if applicable), and any other relevant evidence.</p>
+                                    </div>  
+
+                            <footer>
+                                                <div class="footer-content">
+                                                    <div class="footer-section">
+                                                        <h3 class="footer-title">About LegalLearn</h3>
+                                                        <p>Comprehensive legal education platform making law accessible and understandable for everyone.</p>
+                                                        <div class="social-links">
+                                                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                                                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                                                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                                                        </div>
+                                                    </div>
+                                        
+                                                    <div class="footer-section">
+                                                        <h3 class="footer-title">Quick Links</h3>
+                                                        <ul class="footer-links">
+                                                            <li class="footer-link"><a href="constitutional-law.html">Constitutional Law</a></li>
+                                                            <li class="footer-link"><a href="criminal-law.html">Criminal Law</a></li>
+                                                            <li class="footer-link"><a href="civil-law.html">Civil Law</a></li>
+                                                            <li class="footer-link"><a href="corporate-business-law.html">Corporate Law</a></li>
+                                                            <li class="footer-link"><a href="resources.html">Resources</a></li>
+                                                        </ul>
+                                                    </div>
+                                        
+                                                    <div class="footer-section">
+                                                        <h3 class="footer-title">Contact Info</h3>
+                                                        <ul class="footer-links">
+                                                            <li class="footer-link">
+                                                                <i class="fas fa-envelope"></i>
+                                                                <a href="mailto:info@legallearn.com">info@legallearn.com</a>
+                                                            </li>
+                                                            <li class="footer-link">
+                                                                <i class="fas fa-phone"></i>
+                                                                <a href="tel:+1234567890">+1 (234) 567-890</a>
+                                                            </li>
+                                                            <li class="footer-link">
+                                                                <i class="fas fa-map-marker-alt"></i>
+                                                                <span>New Delhi, India</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                        
+                                                    <div class="footer-section">
+                                                        <h3 class="footer-title">Newsletter</h3>
+                                                        <p>Subscribe to our newsletter for legal updates and insights.</p>
+                                                        <form class="subscribe-form">
+                                                            <input type="email" class="subscribe-input" placeholder="Enter your email">
+                                                            <button type="submit" class="subscribe-btn">
+                                                                <i class="fas fa-paper-plane"></i>
+                                                            </button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                        
+                                                <div class="footer-bottom">
+                                                    <p>&copy; <span id="currentYear"></span> LegalLearn. All rights reserved.</p>
+                                                </div>
+                                        
+                                                <button class="back-to-top" id="backToTop">
+                                                    <i class="fas fa-arrow-up"></i>
+                                                </button>
+                                            </footer>

@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive guide to legal ethics, professional conduct, and responsibilities for legal practitioners">
+    <meta property="og:title" content="LegalLearn - Legal Ethics and Professional Responsibility">
+    <meta property="og:description" content="Learn about ethical principles, professional conduct rules, and best practices in legal practice">
+    <meta property="og:type" content="website">
+    <title>LegalLearn - Legal Ethics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel ="stylesheet" href ="assets/css/index.css">
+    <link rel = "stylesheet" href="assets/css/footer.css">
+    <style>
+        /* Include the common styles from other pages */
+        :root {
+            --primary: #0a2c5a;
+            --secondary: #d4af37;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        [data-theme="dark"] {
+            --primary: #1a4b8c;
+            --light: #212529;
+            --dark: #f8f9fa;
+            --gray: #adb5bd;
+            --light-gray: #343a40;
+            --white: #2b3035;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            transition: var(--transition);
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 270px;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 0;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            transition: var(--transition);
+            z-index: 1000;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            flex: 1;
+            margin-left: 270px;
+            padding: 1.5rem;
+            transition: var(--transition);
+        }
+
+        /* Topic Navigation */
+        .topic-nav {
+            background: var(--white);
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .topic-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .topic-item {
+            padding: 0.5rem 1rem;
+            background: var(--light-gray);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .topic-item:hover,
+        .topic-item.active {
+            background: var(--secondary);
+            color: var(--dark);
+        }
+
+        /* Content Section */
+        .content-section {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 50px;
+            background: var(--secondary);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .ethics-card {
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .ethics-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .ethics-header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        .ethics-icon {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            color: var(--secondary);
+        }
+
+        .ethics-body {
+            padding: 1.5rem;
+        }
+
+        .ethics-list {
+            list-style: none;
+        }
+
+        .ethics-item {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .ethics-item i {
+            color: var(--secondary);
+            margin-right: 0.8rem;
+            margin-top: 0.3rem;
+        }
+
+        /* Case Studies Section */
+        .case-study {
+            background: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .case-title {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .case-content {
+            margin-bottom: 1rem;
+        }
+
+        .case-analysis {
+            background: rgba(var(--primary-rgb), 0.1);
+            padding: 1rem;
+            border-radius: 4px;
+        }
+
+        /* Interactive Elements */
+        .interactive-section {
+            margin-top: 2rem;
+        }
+
+        .scenario-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow);
+        }
+
+        .scenario-options {
+            margin-top: 1rem;
+        }
+
+        .scenario-option {
+            padding: 1rem;
+            background: var(--light-gray);
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .scenario-option:hover {
+            background: var(--secondary);
+            color: var(--dark);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            .sidebar.active {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar content will be identical to other pages -->
+        <nav class="sidebar">
+<!-- Sidebar content -->
+ 
+ <!-- Sidebar Navigation -->
+ <aside class="sidebar">
+    <div class="sidebar-header">
+        <div class="logo">
+            <div class="logo-icon"><i class="fas fa-balance-scale"></i></div>
+            <div class="logo-text">Legal<span>Learn</span></div>
+        </div>
+        <div class="sidebar-search">
+            <i class="fas fa-search"></i>
+            <input type="text" id="sidebarSearch" placeholder="Search legal topics...">
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
+    <ul class="nav-menu">
+        <li class="nav-item">
+            <a href="index.html" class="nav-link active">
+                <i class="fas fa-home"></i> Home
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="constitutional-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-balance-scale"></i> Constitutional Law
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="criminal-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-gavel"></i> Criminal Law
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="civil-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-book-reader"></i> Civil Law
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="corporate-business-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-briefcase"></i> Corporate & Business Law
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="intellectual-property-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-copyright"></i> Intellectual Property Law
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="taxation-laws.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-chart-pie"></i> Taxation Laws
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="cyber-it-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-shield-alt"></i> Cyber & IT Laws
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="consumer-protection-laws.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-shopping-cart"></i> Consumer Protection Laws
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="employment-labor-laws.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-building"></i> Employment & Labor Laws
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="enviornmental-laws.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-leaf"></i> Environmental Laws
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="alternative-dispute-resolution.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-handshake"></i> Alternative Dispute Resolution
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="legal-ethics.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-gavel"></i>Legal Ethics
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="international-trade-law.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-globe"></i>International Trade Law
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="human-rights.html" class="nav-link dropdown-toggle">
+                <i class="fas fa-users"></i>Human Rights
+                <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="faqs.html" class="nav-link">
+                <i class="fas fa-question-circle"></i> FAQs
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="resources.html" class="nav-link">
+                <i class="fas fa-book"></i> Resources
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="about.html" class="nav-link">
+                <i class="fas fa-info-circle"></i> About
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="contact-us.html" class="nav-link">
+                <i class="fas fa-envelope"></i> Contact
+            </a>
+        </li>
+    </ul>
+</aside>
+        </nav>
+
+        <main class="main-content">
+            <nav class="topic-nav">
+                <ul class="topic-list">
+                    <li class="topic-item active">Overview</li>
+                    <li class="topic-item">Professional Conduct</li>
+                    <li class="topic-item">Client Relations</li>
+                    <li class="topic-item">Confidentiality</li>
+                    <li class="topic-item">Conflicts of Interest</li>
+                    <li class="topic-item">Case Studies</li>
+                </ul>
+            </nav>
+
+            <section class="content-section">
+                <h1 class="section-title">Legal Ethics and Professional Responsibility</h1>
+                <p>Legal ethics encompasses the moral principles and rules of conduct that govern the practice of law. Understanding and adhering to these principles is fundamental to maintaining the integrity of the legal profession and ensuring justice is served.</p>
+                
+                <div class="content-grid">
+                    <div class="ethics-card">
+                        <div class="ethics-header">
+                            <h2>Core Ethical Principles</h2>
+                            <i class="fas fa-balance-scale ethics-icon"></i>
+                        </div>
+                        <div class="ethics-body">
+                            <ul class="ethics-list">
+                                <li class="ethics-item">
+                                    <i class="fas fa-check"></i>
+                                    <div>
+                                        <strong>Integrity and Honesty</strong>
+                                        <p>Maintaining truthfulness and moral uprightness in all professional dealings.</p>
+                                    </div>
+                                </li>
+                                <li class="ethics-item">
+                                    <i class="fas fa-check"></i>
+                                    <div>
+                                        <strong>Competence</strong>
+                                        <p>Providing skilled and knowledgeable legal services to clients.</p>
+                                    </div>
+                                </li>
+                                <li class="ethics-item">
+                                    <i class="fas fa-check"></i>
+                                    <div>
+                                        <strong>Confidentiality</strong>
+                                        <p>Protecting client information and maintaining professional secrecy.</p>
+                                    </div>
+                                </li>
+                                <li class="ethics-item">
+                                    <i class="fas fa-check"></i>
+                                    <div>
+                                        <strong>Loyalty</strong>
+                                        <p>Avoiding conflicts of interest and maintaining dedication to clients.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="ethics-card">
+                        <div class="ethics-header">
+                            <h2>Professional Conduct</h2>
+                            <i class="fas fa-gavel ethics-icon"></i>
+                        </div>
+                        <div class="ethics-body">
+                            <ul class="ethics-list">
+                                <li class="ethics-item">
+                                    <i class="fas fa-check"></i>
+                                    <div>
+                                        <strong>Court Conduct</strong>
+                                        <p>Maintaining proper decorum and respect in court proceedings.</p>
+                                    </div>
+                                </li>
+                                <li class="ethics-item">
+                                    <i class="fas fa-check"></i>
+                                    <div>
+                                        <strong>Client Communication</strong>
+                                        <p>Maintaining clear and timely communication with clients.</p>
+                                    </div>
+                                </li>
+                                <li class="ethics-item">
+                                    <i class="fas fa-check"></i>
+                                    <div>
+                                        <strong>Professional Development</strong>
+                                        <p>Continuous learning and skill enhancement.</p>
+                                    </div>
+                                </li>
+                                <li class="ethics-item">
+                                    <i class="fas fa-check"></i>
+                                    <div>
+                                        <strong>Fee Transparency</strong>
+                                        <p>Clear and fair billing practices.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">Case Studies in Legal Ethics</h2>
+                <div class="case-study">
+                    <h3 class="case-title">Confidentiality and Social Media</h3>
+                    <div class="case-content">
+                        <p>A lawyer posts about a successful case outcome on social media without explicitly naming the client but including details that could identify them.</p>
+                    </div>
+                    <div class="case-analysis">
+                        <h4>Ethical Analysis:</h4>
+                        <p>This scenario raises concerns about client confidentiality and professional discretion. Even without naming the client, sharing identifiable details may breach confidentiality obligations.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="interactive-section">
+                <h2 class="section-title">Ethical Decision Making</h2>
+                <div class="scenario-card">
+                    <h3>Scenario: Conflict of Interest</h3>
+                    <p>You are approached by a new client whose interests conflict with a former client's case from two years ago. What should you do?</p>
+                    
+                    <div class="scenario-options">
+                        <div class="scenario-option">
+                            Accept the case if the matters are unrelated
+                        </div>
+                        <div class="scenario-option">
+                            Decline representation due to potential conflict
+                        </div>
+                        <div class="scenario-option">
+                            Seek consent from both clients
+                        </div>
+                        <div class="scenario-option">
+                            Consult with ethics committee
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Theme switcher functionality
+        const themeSwitch = document.querySelector('.theme-switch input');
+        const body = document.querySelector('body');
+
+        themeSwitch?.addEventListener('change', (e) => {
+            if (e.target.checked) {
+                body.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Topic navigation
+        const topicItems = document.querySelectorAll('.topic-item');
+        
+        topicItems.forEach(item => {
+            item.addEventListener('click', () => {
+                topicItems.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+                // Add content switching logic here
+            });
+        });
+
+        // Interactive scenarios
+        const scenarioOptions = document.querySelectorAll('.scenario-option');
+        
+        scenarioOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                scenarioOptions.forEach(o => o.style.background = '');
+                option.style.background = 'var(--secondary)';
+                // Add feedback logic here
+            });
+        });
+    </script>
+</body>
+</html>
