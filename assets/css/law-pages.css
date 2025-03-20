@@ -1,0 +1,223 @@
+/* Law Pages Specific Styles */
+
+/* Page Headers */
+.section-title {
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 50px;
+    background-color: var(--secondary);
+}
+
+/* Card Styles for Law Content */
+.card {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    padding: 1.5rem;
+    background-color: var(--primary);
+    color: var(--white);
+    position: relative;
+}
+
+.card-title {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.card-icon {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--secondary);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-footer {
+    padding: 1rem 1.5rem;
+    background-color: var(--light-gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Feature List Styles */
+.feature-list {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.feature-item {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.feature-icon {
+    margin-right: 0.8rem;
+    color: var(--secondary);
+    font-size: 1rem;
+    padding-top: 0.2rem;
+}
+
+/* Expandable Content */
+.expandable-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.expandable-trigger {
+    cursor: pointer;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.expandable-trigger:hover {
+    color: var(--primary);
+}
+
+.expandable-trigger i {
+    transition: transform 0.3s ease;
+}
+
+.expandable-trigger.active i {
+    transform: rotate(180deg);
+}
+
+/* Badge Styles */
+.badge {
+    display: inline-block;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.badge-primary {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.badge-secondary {
+    background-color: var(--secondary);
+    color: var(--dark);
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: var(--transition);
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: #063a77;
+}
+
+.btn-secondary {
+    background-color: var(--secondary);
+    color: var(--dark);
+}
+
+.btn-secondary:hover {
+    background-color: #c09c30;
+}
+
+.btn-sm {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.slide-up {
+    animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 992px) {
+    .card-header {
+        padding: 1.2rem;
+    }
+    
+    .card-body {
+        padding: 1.2rem;
+    }
+    
+    .card-icon {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card:hover {
+        transform: none;
+    }
+    
+    .feature-item {
+        flex-direction: column;
+    }
+    
+    .feature-icon {
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .card-footer {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+} 

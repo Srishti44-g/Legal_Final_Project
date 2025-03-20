@@ -1,0 +1,137 @@
+
+/* Page-specific styles */
+.law-category {
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.card-header {
+    background: var(--primary);
+    color: var(--white);
+    padding: 1.5rem;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.checklist {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.checklist li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.checklist li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+}
+
+.law-type-card {
+    background: var(--light);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: var(--transition);
+}
+
+.law-type-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.hierarchy-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    background: var(--light);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.hierarchy-number {
+    width: 40px;
+    height: 40px;
+    background: var(--secondary);
+    color: var(--dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.jurisdiction-amount {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    background: var(--secondary);
+    color: var(--dark);
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: var(--dark);
+}
+
+.quick-links {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: var(--light);
+    border-radius: 8px;
+}
+
+.link-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.quick-link {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    background: var(--white);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--primary);
+    transition: var(--transition);
+}
+
+.quick-link:hover {
+    background: var(--secondary);
+    color: var(--dark);
+    transform: translateX(5px);
+}
+
+@media screen and (max-width: 768px) {
+    .link-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+}
